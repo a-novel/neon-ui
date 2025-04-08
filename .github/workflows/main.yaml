@@ -1,0 +1,39 @@
+name: main
+
+on:
+  push:
+    branches:
+      - "**"
+    tags-ignore:
+      - "**"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: a-novel-kit/workflows/node-actions/lint-node@master
+
+  build:
+    needs:
+      - lint
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - uses: a-novel-kit/workflows/node-actions/build-node@master
+
+  auto-tag:
+    if: github.ref == 'refs/heads/master' && success()
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - uses: a-novel-kit/workflows/node-actions/auto-tag@master
+        with:
+          pat: ${{ secrets.ACTION_PAT }}

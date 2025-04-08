@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+
+:root {
+  /* Spacing design system */
+  --spacing: 1rem; /* Colleague */
+  --spacing-s: calc(var(--spacing) / 2); /* Friend */
+  --spacing-l: calc(var(--spacing) * 2); /* Social */
+  --spacing-xl: calc(var(--spacing-l) * 2); /* The Boss */
+
+  /* Scales */
+  --scale: 1rem;
+  --scale-s: calc(var(--scale) / 1.6);
+  --scale-xs: calc(var(--scale-s) / 1.6);
+  --scale-l: calc(var(--scale) * 1.6);
+  --scale-xl: calc(var(--scale-l) * 1.6);
+  --scale-xxl: calc(var(--scale-xl) * 1.6);
+
+  /* Colors */
+  --primary: 31, 173, 255;
+  --primary-complement: 31, 255, 227;
+  --secondary: 255, 171, 51;
+  --secondary-complement: 255, 212, 51;
+  --contrast: 245, 45, 118;
+  --contrast-complement: 255, 51, 191;
+
+  --foreground: 255, 255, 255;
+  --background: 0, 0, 0;
+
+  --primary-variant-25: 0, 46, 71;
+  --primary-variant-33: 0, 61, 97;
+  --primary-variant-50: 0, 90, 143;
+  --primary-variant-66: 0, 121, 191;
+  --primary-variant-75: 0, 135, 214;
+  --primary-complement-variant-25: 0, 71, 62;
+  --primary-complement-variant-33: 0, 97, 85;
+  --primary-complement-variant-50: 0, 143, 125;
+  --primary-complement-variant-66: 0, 191, 167;
+  --primary-complement-variant-75: 0, 214, 187;
+
+  --secondary-variant-25: 76, 44, 0;
+  --secondary-variant-33: 104, 61, 0;
+  --secondary-variant-50: 153, 89, 0;
+  --secondary-variant-66: 205, 120, 0;
+  --secondary-variant-75: 229, 134, 0;
+  --secondary-complement-variant-25: 76, 60, 0;
+  --secondary-complement-variant-33: 104, 82, 0;
+  --secondary-complement-variant-50: 153, 120, 0;
+  --secondary-complement-variant-66: 205, 161, 0;
+  --secondary-complement-variant-75: 229, 181, 0;
+
+  --contrast-variant-25: 69, 3, 27;
+  --contrast-variant-33: 94, 4, 37;
+  --contrast-variant-50: 138, 6, 54;
+  --contrast-variant-66: 185, 8, 73;
+  --contrast-variant-75: 207, 9, 82;
+  --contrast-complement-variant-25: 76, 0, 52;
+  --contrast-complement-variant-33: 104, 0, 71;
+  --contrast-complement-variant-50: 153, 0, 105;
+  --contrast-complement-variant-66: 205, 0, 140;
+  --contrast-complement-variant-75: 229, 0, 157;
+
+  --foreground-variant-25: 63, 63, 63;
+  --foreground-variant-33: 86, 86, 86;
+  --foreground-variant-50: 127, 127, 127;
+  --foreground-variant-66: 170, 170, 170;
+  --foreground-variant-75: 191, 191, 191;
+}
+
+*[data-theme="default"],
+body {
+  --color: var(--foreground);
+  --color-complement: var(--foreground);
+
+  --color-variant-25: var(--foreground-variant-25);
+  --color-variant-33: var(--foreground-variant-33);
+  --color-variant-50: var(--foreground-variant-50);
+  --color-variant-66: var(--foreground-variant-66);
+  --color-variant-75: var(--foreground-variant-75);
+  --color-complement-variant-25: var(--foreground-variant-25);
+  --color-complement-variant-33: var(--foreground-variant-33);
+  --color-complement-variant-50: var(--foreground-variant-50);
+  --color-complement-variant-66: var(--foreground-variant-66);
+  --color-complement-variant-75: var(--foreground-variant-75);
+}
+
+*[data-theme="primary"] {
+  --color: var(--primary);
+  --color-complement: var(--primary-complement);
+
+  --color-variant-25: var(--primary-variant-25);
+  --color-variant-33: var(--primary-variant-33);
+  --color-variant-50: var(--primary-variant-50);
+  --color-variant-66: var(--primary-variant-66);
+  --color-variant-75: var(--primary-variant-75);
+  --color-complement-variant-25: var(--primary-complement-variant-25);
+  --color-complement-variant-33: var(--primary-complement-variant-33);
+  --color-complement-variant-50: var(--primary-complement-variant-50);
+  --color-complement-variant-66: var(--primary-complement-variant-66);
+  --color-complement-variant-75: var(--primary-complement-variant-75);
+}
+
+*[data-theme="secondary"] {
+  --color: var(--secondary);
+  --color-complement: var(--secondary-complement);
+
+  --color-variant-25: var(--secondary-variant-25);
+  --color-variant-33: var(--secondary-variant-33);
+  --color-variant-50: var(--secondary-variant-50);
+  --color-variant-66: var(--secondary-variant-66);
+  --color-variant-75: var(--secondary-variant-75);
+  --color-complement-variant-25: var(--secondary-complement-variant-25);
+  --color-complement-variant-33: var(--secondary-complement-variant-33);
+  --color-complement-variant-50: var(--secondary-complement-variant-50);
+  --color-complement-variant-66: var(--secondary-complement-variant-66);
+  --color-complement-variant-75: var(--secondary-complement-variant-75);
+}
+
+*[data-theme="contrast"] {
+  --color: var(--contrast);
+  --color-complement: var(--contrast-complement);
+
+  --color-variant-25: var(--contrast-variant-25);
+  --color-variant-33: var(--contrast-variant-33);
+  --color-variant-50: var(--contrast-variant-50);
+  --color-variant-66: var(--contrast-variant-66);
+  --color-variant-75: var(--contrast-variant-75);
+  --color-complement-variant-25: var(--contrast-complement-variant-25);
+  --color-complement-variant-33: var(--contrast-complement-variant-33);
+  --color-complement-variant-50: var(--contrast-complement-variant-50);
+  --color-complement-variant-66: var(--contrast-complement-variant-66);
+  --color-complement-variant-75: var(--contrast-complement-variant-75);
+}
+
+*[data-theme]:not([data-box]) {
+  color: rgb(var(--color));
+}
+
+*[data-theme][data-gradient="true"]:not([data-box]) {
+  background-image: linear-gradient(
+    45deg,
+    rgb(var(--color-variant-75)) 0%,
+    rgb(var(--color)) 25%,
+    rgb(var(--color-complement)) 100%
+  );
+  color: transparent;
+  background-clip: text;
+}
+
+*[data-theme][data-gradient="true"][data-box] {
+  background-color: transparent;
+  color: rgb(var(--foreground));
+}
+
+*[data-theme][data-gradient="true"][data-box]:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  display: block;
+  background-color: transparent;
+  z-index: -1;
+  background-image: linear-gradient(
+    45deg,
+    rgb(var(--color-variant-25)) 0%,
+    rgb(var(--color-variant-50)) 25%,
+    rgb(var(--color-complement-variant-50)) 100%
+  );
+  box-shadow: rgba(var(--color-complement), 0.5) 0 0 0.2rem 0 inset;
+  opacity: 0.66;
+}
+
+*[data-theme][data-box] {
+  background-color: rgba(var(--color-variant-50), 0.66);
+  box-shadow: rgba(var(--color-variant-25), 0.66) 0 0.3rem 0 0;
+  backdrop-filter: saturate(75%) blur(0.5rem);
+  color: rgb(var(--foreground));
+
+  transform-origin: center;
+  transform: translateY(-0.3rem);
+  transition: linear 0.15s;
+
+  position: relative;
+  /* Elevate the box on the z-plane to allow for background effects. */
+  z-index: 2;
+}
+
+*[data-box="true"] {
+  border-radius: var(--scale-s);
+  padding: var(--spacing-s) var(--spacing);
+  gap: var(--spacing-s);
+}
+
+*[data-box][data-focusable="true"]:focus-within {
+  background-color: rgba(var(--color-variant-50), 0.75);
+}
+
+*[data-box][data-focusable="true"]:focus-within:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  display: block;
+  background-color: transparent;
+  z-index: 0;
+  box-shadow: rgba(var(--color-variant-25), 0.66) 0 0 0 2px;
+}
+
+*[data-box][data-clickable="true"] {
+  cursor: pointer;
+}
+
+*[data-box][data-clickable="true"]:active {
+  transform: translate(0, 0);
+  box-shadow: none;
+}
+
+*[data-glow="true"]:not([data-box]) {
+  text-shadow: 0 0 1.6em rgb(var(--color-complement));
+}
+
+*[data-glow="true"][data-box] {
+  box-shadow:
+    rgba(var(--color-variant-25), 0.66) 0 0.3rem 0 0,
+    rgba(var(--color), 0.75) 0 0 var(--scale-xl);
+}
+
+body {
+  color: rgb(var(--foreground));
+  background-color: rgb(var(--background));
+}
+
+*[data-font="rubik-glitch"] {
+  font-family: "Rubik Glitch", system-ui;
+}
+
+*[data-font="default"],
+body {
+  font-family: "Arimo", system-ui;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: currentColor;
+}

@@ -1,0 +1,70 @@
+{
+  "name": "@a-novel/neon-ui",
+  "private": false,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "lint:stylecheck": "prettier --check . --config prettier.config.ts",
+    "lint:typecheck": "tsc",
+    "lint:eslint": "pnpm dlx eslint .",
+    "lint": "pnpm lint:stylecheck && pnpm lint:typecheck && pnpm lint:eslint",
+    "format": "prettier --write . --config prettier.config.ts",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "build": "rm -rf ./dist && vite build"
+  },
+  "author": "A-Novel",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a-novel/neon-ui.git"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@storybook/addon-essentials": "^8.6.12",
+    "@storybook/addon-interactions": "^8.6.12",
+    "@storybook/addon-onboarding": "^8.6.12",
+    "@storybook/blocks": "^8.6.12",
+    "@storybook/react": "^8.6.12",
+    "@storybook/react-vite": "^8.6.12",
+    "@storybook/test": "^8.6.12",
+    "@storybook/theming": "^8.6.12",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/react": "^19.1.0",
+    "eslint": "^9.24.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-storybook": "^0.12.0",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3",
+    "storybook": "^8.6.12",
+    "typescript": "~5.7.3",
+    "typescript-eslint": "^8.29.1",
+    "vite": "^6.2.5",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  },
+  "packageManager": "pnpm@10.7.1",
+  "engines": {
+    "npm": ">=10.9.2",
+    "node": ">=23.11.0"
+  }
+}
