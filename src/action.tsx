@@ -11,6 +11,7 @@ export type ActionProps<T extends keyof JSX.IntrinsicElements | JSXElementConstr
   gradient?: boolean | Theme;
   focusable?: boolean;
   clickable?: boolean;
+  disabled?: boolean;
 };
 
 export const Action = <T extends keyof JSX.IntrinsicElements | JSXElementConstructor<any>>({
@@ -20,6 +21,7 @@ export const Action = <T extends keyof JSX.IntrinsicElements | JSXElementConstru
   gradient = false,
   focusable = false,
   clickable = false,
+  disabled = false,
   className = "",
   ...props
 }: ActionProps<T>) => (
@@ -29,6 +31,7 @@ export const Action = <T extends keyof JSX.IntrinsicElements | JSXElementConstru
     data-gradient={gradient ? (gradient === true ? theme : gradient) : undefined}
     data-focusable={focusable}
     data-clickable={clickable}
+    data-disabled={disabled}
     className={`${css.action} ${className}`}
     {...props}
   />

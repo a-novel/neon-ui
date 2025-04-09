@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import { Action } from "../action";
+import { Action } from "../";
 
 const meta: Meta<typeof Action> = {
   component: Action,
@@ -239,5 +239,15 @@ export const GradientColorContrast: Story = {
       "aliquip ex ea commodo consequat.",
     theme: "contrast",
     gradient: true,
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    children:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
+      "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
+      "aliquip ex ea commodo consequat.",
+    disabled: true,
   },
 };
