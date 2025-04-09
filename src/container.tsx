@@ -4,17 +4,18 @@ import { ComponentProps, JSX, JSXElementConstructor } from "react";
 
 import { Scale, Spacing, spacingToCss, Theme } from "./common";
 
-export type ContainerProps<T extends keyof JSX.IntrinsicElements | JSXElementConstructor<any>> = ComponentProps<T> & {
-  component?: T;
-  boxed?: boolean;
-  theme?: Theme;
-  scale?: Scale;
-  spacing?:
-    | Spacing
-    | { v: Spacing; h: Spacing; gap: Spacing }
-    | { top: Spacing; right: Spacing; bottom: Spacing; left: Spacing; gap: Spacing };
-  margin?: Spacing | { v: Spacing; h: Spacing } | { top: Spacing; right: Spacing; bottom: Spacing; left: Spacing };
-};
+export type ContainerProps<T extends keyof JSX.IntrinsicElements | JSXElementConstructor<any> = "div"> =
+  ComponentProps<T> & {
+    component?: T;
+    boxed?: boolean;
+    theme?: Theme;
+    scale?: Scale;
+    spacing?:
+      | Spacing
+      | { v: Spacing; h: Spacing; gap: Spacing }
+      | { top: Spacing; right: Spacing; bottom: Spacing; left: Spacing; gap: Spacing };
+    margin?: Spacing | { v: Spacing; h: Spacing } | { top: Spacing; right: Spacing; bottom: Spacing; left: Spacing };
+  };
 
 export const Container = <T extends keyof JSX.IntrinsicElements | JSXElementConstructor<any>>({
   component: Component = "div",

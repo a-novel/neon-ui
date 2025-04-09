@@ -2,6 +2,8 @@
   border-radius: var(--scale-s);
   padding: var(--spacing);
   gap: var(--spacing-s);
+  font-family: inherit;
+  font-size: var(--scale);
 
   background-color: rgba(var(--color-variant-50), 0.66);
   box-shadow: rgba(var(--color-variant-25), 0.66) 0 0.3rem 0 0;
@@ -18,6 +20,23 @@
   position: relative;
   /* Elevate the box on the z-plane to allow for background effects. */
   z-index: 2;
+  text-align: center;
+}
+
+button.action {
+  outline: none;
+  border: none;
+  user-select: none;
+}
+
+a.action {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+a.action:visited {
+  color: inherit;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------ */

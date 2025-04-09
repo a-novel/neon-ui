@@ -4,15 +4,16 @@ import { ComponentProps, JSX, JSXElementConstructor } from "react";
 
 import { Theme } from "./common";
 
-export type ActionProps<T extends keyof JSX.IntrinsicElements | JSXElementConstructor<any>> = ComponentProps<T> & {
-  component?: T;
-  theme?: Theme;
-  glow?: boolean | Theme;
-  gradient?: boolean | Theme;
-  focusable?: boolean;
-  clickable?: boolean;
-  disabled?: boolean;
-};
+export type ActionProps<T extends keyof JSX.IntrinsicElements | JSXElementConstructor<any> = "div"> =
+  ComponentProps<T> & {
+    component?: T;
+    theme?: Theme;
+    glow?: boolean | Theme;
+    gradient?: boolean | Theme;
+    focusable?: boolean;
+    clickable?: boolean;
+    disabled?: boolean;
+  };
 
 export const Action = <T extends keyof JSX.IntrinsicElements | JSXElementConstructor<any>>({
   component: Component = "div",
