@@ -2,7 +2,7 @@ import css from "./action.module.css";
 
 import { ComponentProps, JSX, JSXElementConstructor } from "react";
 
-import { Theme } from "./common.ts";
+import { Theme } from "./common";
 
 export type ActionProps<T extends keyof JSX.IntrinsicElements | JSXElementConstructor<any>> = ComponentProps<T> & {
   component?: T;

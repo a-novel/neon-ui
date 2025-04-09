@@ -2,7 +2,7 @@ import css from "./typography.module.css";
 
 import { ComponentProps, CSSProperties, JSX, JSXElementConstructor } from "react";
 
-import { Scale, Theme, Variant } from "./common.ts";
+import { Scale, Theme, Variant } from "./common";
 
 export type TypographyProps<T extends keyof JSX.IntrinsicElements | JSXElementConstructor<any>> = ComponentProps<T> & {
   component?: T;

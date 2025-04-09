@@ -1,7 +1,7 @@
 {
   "name": "@a-novel/neon-ui",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
@@ -12,7 +12,7 @@
     "format": "prettier --write . --config prettier.config.ts",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build": "rm -rf ./dist && vite build"
+    "build": "rm -rf ./dist && vite build && tsc --build tsconfig.build.json"
   },
   "author": "A-Novel",
   "license": "AGPL-3.0",
@@ -20,9 +20,15 @@
     "type": "git",
     "url": "https://github.com/a-novel/neon-ui.git"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "exports": {
     ".": {
-      "import": "./dist/index.es.js"
+      "import": "./dist/index.es.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "publishConfig": {

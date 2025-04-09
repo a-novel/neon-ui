@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import { Action } from "../action.tsx";
+import { Action } from "../action";
 
 const meta: Meta<typeof Action> = {
   component: Action,
