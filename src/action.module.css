@@ -5,12 +5,15 @@
 
   background-color: rgba(var(--color-variant-50), 0.66);
   box-shadow: rgba(var(--color-variant-25), 0.66) 0 0.3rem 0 0;
-  backdrop-filter: saturate(75%) blur(0.5rem);
+  backdrop-filter: var(--backdrop);
   color: rgb(var(--foreground));
 
   transform-origin: center;
   transform: translateY(-0.3rem);
   transition: linear 0.15s;
+
+  /* Adjust for the fake 3d transform */
+  margin-top: 0.15rem;
 
   position: relative;
   /* Elevate the box on the z-plane to allow for background effects. */
@@ -169,4 +172,15 @@
 .action[data-clickable="true"]:active {
   transform: translate(0, 0);
   box-shadow: none;
+}
+
+.action[data-disabled="true"] {
+  pointer-events: none;
+  background-color: rgba(var(--foreground-variant-25), 0.75) !important;
+  transform: translateY(0) !important;
+  box-shadow: none !important;
+  color: rgb(var(--foreground-variant-75));
+}
+.action[data-disabled="true"]:before {
+  display: none !important;
 }

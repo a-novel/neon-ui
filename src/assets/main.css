@@ -66,6 +66,9 @@
   --foreground-variant-50: 127, 127, 127;
   --foreground-variant-66: 170, 170, 170;
   --foreground-variant-75: 191, 191, 191;
+
+  /* Other */
+  --backdrop: saturate(75%) blur(0.33rem);
 }
 
 body {

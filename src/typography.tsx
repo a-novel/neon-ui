@@ -2,12 +2,12 @@ import css from "./typography.module.css";
 
 import { ComponentProps, CSSProperties, JSX, JSXElementConstructor } from "react";
 
-import { Scale, Theme, Variant } from "./common";
+import { Scale, scaleToCss, Theme, Variant } from "./common";
 
 export type TypographyProps<T extends keyof JSX.IntrinsicElements | JSXElementConstructor<any>> = ComponentProps<T> & {
   component?: T;
   theme?: Theme;
-  size: Scale;
+  size?: Scale;
   variant?: Variant;
   bold?: boolean;
   italic?: boolean;
@@ -34,7 +34,6 @@ export const Typography = <T extends keyof JSX.IntrinsicElements | JSXElementCon
 }: TypographyProps<T>) => (
   <Component
     data-theme={theme}
-    data-size={size}
     data-variant={variant}
     data-bold={bold}
     data-italic={italic}
@@ -42,7 +41,7 @@ export const Typography = <T extends keyof JSX.IntrinsicElements | JSXElementCon
     data-gradient={gradient ? (gradient === true ? theme : gradient) : undefined}
     data-glow={glow ? (glow === true ? theme : glow) : undefined}
     className={`${css.typography} ${className}`}
-    style={{ textAlign: align, ...style }}
+    style={{ textAlign: align, fontSize: scaleToCss(size), ...style }}
     {...props}
   />
 );
