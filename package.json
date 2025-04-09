@@ -62,7 +62,7 @@
       "plugin:storybook/recommended"
     ]
   },
-  "packageManager": "pnpm@10.7.1",
+  "packageManager": "pnpm@10.8.0",
   "engines": {
     "npm": ">=10.9.2",
     "node": ">=23.11.0"
