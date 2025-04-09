@@ -1,7 +1,7 @@
 {
   "name": "@a-novel/neon-ui",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
@@ -54,7 +54,7 @@
     "vite": "^6.2.5",
     "vite-tsconfig-paths": "^5.1.4"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^19.1.0"
   },
   "eslintConfig": {

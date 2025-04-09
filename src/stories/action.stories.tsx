@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import { Themed } from "../themed.tsx";
+import { Action } from "../action.tsx";
 
-const meta: Meta<typeof Themed> = {
-  component: Themed,
+const meta: Meta<typeof Action> = {
+  component: Action,
   parameters: {
     layout: "centered",
     children: { control: { disable: true } },
@@ -54,56 +54,13 @@ export const ColorContrast: Story = {
   },
 };
 
-export const Box: Story = {
-  args: {
-    children:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
-      "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
-      "aliquip ex ea commodo consequat.",
-    box: true,
-  },
-};
-
-export const BoxColorPrimary: Story = {
-  args: {
-    children:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
-      "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
-      "aliquip ex ea commodo consequat.",
-    theme: "primary",
-    box: true,
-  },
-};
-
-export const BoxColorSecondary: Story = {
-  args: {
-    children:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
-      "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
-      "aliquip ex ea commodo consequat.",
-    theme: "secondary",
-    box: true,
-  },
-};
-
-export const BoxColorContrast: Story = {
-  args: {
-    children:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
-      "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
-      "aliquip ex ea commodo consequat.",
-    theme: "contrast",
-    box: true,
-  },
-};
-
 export const Focusable: Story = {
   args: {
     children:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
       "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
       "aliquip ex ea commodo consequat.",
-    box: true,
+
     tabindex: "0",
     focusable: true,
   },
@@ -116,7 +73,7 @@ export const FocusableColorPrimary: Story = {
       "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
       "aliquip ex ea commodo consequat.",
     theme: "primary",
-    box: true,
+
     tabindex: "0",
     focusable: true,
   },
@@ -129,7 +86,7 @@ export const FocusableColorSecondary: Story = {
       "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
       "aliquip ex ea commodo consequat.",
     theme: "secondary",
-    box: true,
+
     tabindex: "0",
     focusable: true,
   },
@@ -142,7 +99,7 @@ export const FocusableColorContrast: Story = {
       "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
       "aliquip ex ea commodo consequat.",
     theme: "contrast",
-    box: true,
+
     tabindex: "0",
     focusable: true,
   },
@@ -154,7 +111,7 @@ export const Clickable: Story = {
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
       "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
       "aliquip ex ea commodo consequat.",
-    box: true,
+
     clickable: true,
   },
 };
@@ -166,7 +123,7 @@ export const ClickableColorPrimary: Story = {
       "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
       "aliquip ex ea commodo consequat.",
     theme: "primary",
-    box: true,
+
     clickable: true,
   },
 };
@@ -178,7 +135,7 @@ export const ClickableColorSecondary: Story = {
       "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
       "aliquip ex ea commodo consequat.",
     theme: "secondary",
-    box: true,
+
     clickable: true,
   },
 };
@@ -190,7 +147,7 @@ export const ClickableColorContrast: Story = {
       "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
       "aliquip ex ea commodo consequat.",
     theme: "contrast",
-    box: true,
+
     clickable: true,
   },
 };
@@ -201,6 +158,7 @@ export const Glow: Story = {
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
       "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
       "aliquip ex ea commodo consequat.",
+
     glow: true,
   },
 };
@@ -212,6 +170,7 @@ export const GlowColorPrimary: Story = {
       "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
       "aliquip ex ea commodo consequat.",
     theme: "primary",
+
     glow: true,
   },
 };
@@ -223,6 +182,7 @@ export const GlowColorSecondary: Story = {
       "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
       "aliquip ex ea commodo consequat.",
     theme: "secondary",
+
     glow: true,
   },
 };
@@ -234,64 +194,8 @@ export const GlowColorContrast: Story = {
       "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
       "aliquip ex ea commodo consequat.",
     theme: "contrast",
-    glow: true,
-  },
-};
 
-export const BoxGlow: Story = {
-  args: {
-    children:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
-      "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
-      "aliquip ex ea commodo consequat.",
-    box: true,
     glow: true,
-  },
-};
-
-export const BoxGlowColorPrimary: Story = {
-  args: {
-    children:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
-      "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
-      "aliquip ex ea commodo consequat.",
-    theme: "primary",
-    box: true,
-    glow: true,
-  },
-};
-
-export const BoxGlowColorSecondary: Story = {
-  args: {
-    children:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
-      "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
-      "aliquip ex ea commodo consequat.",
-    theme: "secondary",
-    box: true,
-    glow: true,
-  },
-};
-
-export const BoxGlowColorContrast: Story = {
-  args: {
-    children:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
-      "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
-      "aliquip ex ea commodo consequat.",
-    theme: "contrast",
-    box: true,
-    glow: true,
-  },
-};
-
-export const FontRubikGlitch: Story = {
-  args: {
-    children:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
-      "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
-      "aliquip ex ea commodo consequat.",
-    font: "rubik-glitch",
   },
 };
 
@@ -333,54 +237,7 @@ export const GradientColorContrast: Story = {
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
       "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
       "aliquip ex ea commodo consequat.",
-    gradient: true,
-    theme: "contrast",
-  },
-};
-
-export const BoxGradient: Story = {
-  args: {
-    children:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
-      "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
-      "aliquip ex ea commodo consequat.",
-    gradient: true,
-    box: true,
-  },
-};
-
-export const BoxGradientColorPrimary: Story = {
-  args: {
-    children:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
-      "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
-      "aliquip ex ea commodo consequat.",
-    gradient: true,
-    theme: "primary",
-    box: true,
-  },
-};
-
-export const BoxGradientColorSecondary: Story = {
-  args: {
-    children:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
-      "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
-      "aliquip ex ea commodo consequat.",
-    gradient: true,
-    theme: "secondary",
-    box: true,
-  },
-};
-
-export const BoxGradientColorContrast: Story = {
-  args: {
-    children:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut " +
-      "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut " +
-      "aliquip ex ea commodo consequat.",
     theme: "contrast",
     gradient: true,
-    box: true,
   },
 };

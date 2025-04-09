@@ -1,0 +1,172 @@
+.action {
+  border-radius: var(--scale-s);
+  padding: var(--spacing);
+  gap: var(--spacing-s);
+
+  background-color: rgba(var(--color-variant-50), 0.66);
+  box-shadow: rgba(var(--color-variant-25), 0.66) 0 0.3rem 0 0;
+  backdrop-filter: saturate(75%) blur(0.5rem);
+  color: rgb(var(--foreground));
+
+  transform-origin: center;
+  transform: translateY(-0.3rem);
+  transition: linear 0.15s;
+
+  position: relative;
+  /* Elevate the box on the z-plane to allow for background effects. */
+  z-index: 2;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Themes */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+.action[data-theme="default"] {
+  --color-variant-25: var(--foreground-variant-25);
+  --color-variant-33: var(--foreground-variant-33);
+  --color-variant-50: var(--foreground-variant-50);
+  --color-variant-66: var(--foreground-variant-66);
+  --color-variant-75: var(--foreground-variant-75);
+  --color-variant-100: var(--foreground);
+
+  --color-complement-variant-25: var(--foreground-variant-25);
+  --color-complement-variant-33: var(--foreground-variant-33);
+  --color-complement-variant-50: var(--foreground-variant-50);
+  --color-complement-variant-66: var(--foreground-variant-66);
+  --color-complement-variant-75: var(--foreground-variant-75);
+  --color-complement-variant-100: var(--foreground);
+}
+.action[data-theme="primary"] {
+  --color-variant-25: var(--primary-variant-25);
+  --color-variant-33: var(--primary-variant-33);
+  --color-variant-50: var(--primary-variant-50);
+  --color-variant-66: var(--primary-variant-66);
+  --color-variant-75: var(--primary-variant-75);
+  --color-variant-100: var(--primary);
+
+  --color-complement-variant-25: var(--primary-complement-variant-25);
+  --color-complement-variant-33: var(--primary-complement-variant-33);
+  --color-complement-variant-50: var(--primary-complement-variant-50);
+  --color-complement-variant-66: var(--primary-complement-variant-66);
+  --color-complement-variant-75: var(--primary-complement-variant-75);
+  --color-complement-variant-100: var(--primary-complement);
+}
+.action[data-theme="secondary"] {
+  --color-variant-25: var(--secondary-variant-25);
+  --color-variant-33: var(--secondary-variant-33);
+  --color-variant-50: var(--secondary-variant-50);
+  --color-variant-66: var(--secondary-variant-66);
+  --color-variant-75: var(--secondary-variant-75);
+  --color-variant-100: var(--secondary);
+
+  --color-complement-variant-25: var(--secondary-complement-variant-25);
+  --color-complement-variant-33: var(--secondary-complement-variant-33);
+  --color-complement-variant-50: var(--secondary-complement-variant-50);
+  --color-complement-variant-66: var(--secondary-complement-variant-66);
+  --color-complement-variant-75: var(--secondary-complement-variant-75);
+  --color-complement-variant-100: var(--secondary-complement);
+}
+.action[data-theme="contrast"] {
+  --color-variant-25: var(--contrast-variant-25);
+  --color-variant-33: var(--contrast-variant-33);
+  --color-variant-50: var(--contrast-variant-50);
+  --color-variant-66: var(--contrast-variant-66);
+  --color-variant-75: var(--contrast-variant-75);
+  --color-variant-100: var(--contrast);
+
+  --color-complement-variant-25: var(--contrast-complement-variant-25);
+  --color-complement-variant-33: var(--contrast-complement-variant-33);
+  --color-complement-variant-50: var(--contrast-complement-variant-50);
+  --color-complement-variant-66: var(--contrast-complement-variant-66);
+  --color-complement-variant-75: var(--contrast-complement-variant-75);
+  --color-complement-variant-100: var(--contrast-complement);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Gradients */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+.action[data-gradient] {
+  background-color: transparent;
+}
+.action[data-gradient]:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  display: block;
+  background-color: transparent;
+  z-index: -1;
+  background-image: linear-gradient(
+    45deg,
+    rgb(var(--gradient-1)) 0%,
+    rgb(var(--gradient-2)) 25%,
+    rgb(var(--gradient-3)) 100%
+  );
+  box-shadow: rgba(var(--gradient-shadow), 0.5) 0 0 0.2rem 0 inset;
+  opacity: 0.66;
+}
+.action[data-gradient="default"] {
+  --gradient-1: var(--foreground-variant-25);
+  --gradient-2: var(--foreground-variant-50);
+  --gradient-3: var(--foreground-variant-33);
+  --gradient-shadow: var(--foreground);
+}
+.action[data-gradient="primary"] {
+  --gradient-1: var(--primary-variant-25);
+  --gradient-2: var(--primary-variant-50);
+  --gradient-3: var(--primary-complement-variant-50);
+  --gradient-shadow: var(--primary-complement);
+}
+.action[data-gradient="secondary"] {
+  --gradient-1: var(--secondary-variant-25);
+  --gradient-2: var(--secondary-variant-50);
+  --gradient-3: var(--secondary-complement-variant-50);
+  --gradient-shadow: var(--secondary-complement);
+}
+.action[data-gradient="contrast"] {
+  --gradient-1: var(--contrast-variant-25);
+  --gradient-2: var(--contrast-variant-50);
+  --gradient-3: var(--contrast-complement-variant-50);
+  --gradient-shadow: var(--contrast-complement);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Glows */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+.action[data-glow] {
+  box-shadow:
+    rgba(var(--color-variant-25), 0.66) 0 0.3rem 0 0,
+    rgba(var(--glow-color), 0.75) 0 0 var(--scale-xl);
+}
+.action[data-glow="default"] {
+  --glow-color: var(--foreground);
+}
+.action[data-glow="primary"] {
+  --glow-color: var(--primary);
+}
+.action[data-glow="secondary"] {
+  --glow-color: var(--secondary);
+}
+.action[data-glow="contrast"] {
+  --glow-color: var(--contrast);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Decorations */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+.action[data-focusable="true"]:focus-within {
+  background-color: rgba(var(--color-variant-50), 0.75);
+}
+.action[data-clickable="true"] {
+  cursor: pointer;
+}
+.action[data-clickable="true"]:active {
+  transform: translate(0, 0);
+  box-shadow: none;
+}

@@ -1,4 +1,5 @@
 import "./assets/main.css";
 
 export * from "./symbol";
-export * from "./themed";
+export * from "./action";
+export * from "./typography";
