@@ -1,7 +1,7 @@
 {
   "name": "@a-novel/neon-ui",
   "private": false,
-  "version": "2.0.0",
+  "version": "2.1.0",
   "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
@@ -10,7 +10,9 @@
     "lint:eslint": "pnpm dlx eslint .",
     "lint": "pnpm lint:stylecheck && pnpm lint:typecheck && pnpm lint:eslint",
     "format": "prettier --write . --config prettier.config.ts",
-    "build": "rm -rf ./dist && vite build && tsc --build tsconfig.build.json"
+    "build": "rm -rf ./dist && vite build && tsc --build tsconfig.build.json",
+    "storybook:dev": "dotenvx run -f .env.dev -- storybook dev -p 6006",
+    "storybook:build": "storybook build"
   },
   "author": "A-Novel",
   "license": "AGPL-3.0",
@@ -34,6 +36,9 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.25.1",
+    "@storybook/react": "^8.6.12",
+    "@storybook/react-vite": "^8.6.12",
+    "@storybook/theming": "^8.6.12",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/react": "^19.1.2",
     "eslint": "^9.25.1",
@@ -52,11 +57,17 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^7.0.2",
-    "react": "^19.1.0"
+    "react": "^19.1.0",
+    "@mui-symbols-material/w400": "^0.4.1"
   },
   "packageManager": "pnpm@10.9.0",
   "engines": {
     "npm": ">=10.9.2",
     "node": ">=23.11.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }

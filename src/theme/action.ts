@@ -44,7 +44,7 @@ export const ActionOutline = (color: ActionPaletteColor, palette: PaletteOptions
   outline: "none",
   border: "none",
   color: (palette[color] as Color)[500],
-  borderWidth: "2px",
+  borderWidth: "thin",
   borderStyle: "solid",
   borderColor: "currentColor",
   backgroundColor: withTransparency(palette.grey!["50"]!, 25),
