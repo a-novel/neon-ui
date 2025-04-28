@@ -60,7 +60,7 @@
     "react": "^19.1.0",
     "@mui-symbols-material/w400": "^0.4.1"
   },
-  "packageManager": "pnpm@10.9.0",
+  "packageManager": "pnpm@10.10.0",
   "engines": {
     "npm": ">=10.9.2",
     "node": ">=23.11.0"
