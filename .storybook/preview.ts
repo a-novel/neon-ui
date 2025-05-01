@@ -1,7 +1,9 @@
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { withThemeFromJSXProvider } from "@storybook/addon-themes";
 import type { Preview } from "@storybook/react";
 import { themes } from "@storybook/theming";
 
-import { withMuiTheme } from "../src";
+import { theme } from "../src";
 
 themes.dark.appContentBg = "#000000";
 themes.dark.appPreviewBg = "#000000";
@@ -20,6 +22,15 @@ const preview: Preview = {
   },
 };
 
-export const decorators = [withMuiTheme];
+export const decorators = [
+  withThemeFromJSXProvider({
+    themes: {
+      dark: theme,
+    },
+    defaultTheme: "dark",
+    Provider: ThemeProvider,
+    GlobalStyles: CssBaseline,
+  }),
+];
 
 export default preview;

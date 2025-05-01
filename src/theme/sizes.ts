@@ -11,7 +11,7 @@ export const FONT_SIZE = 16;
 /**
  * Use golden ratio scales. 1.27 is the root of the actual ratio, for smoother scaling.
  */
-export const scaleGolden = (base: number, factor: number) => base * 1.272 ** factor;
+export const scaleGolden = (base: number, factor: number) => base * 1.618 ** factor;
 
 /**
  * Use linear scaling.

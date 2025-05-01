@@ -22,6 +22,9 @@ export const ActionBase = (color: ActionPaletteColor, palette: PaletteOptions = 
   borderColor: withTransparency((palette[color] as Color)[50], 66),
   boxShadow: `${withTransparency((palette[color] as Color)[100], 75)} 0 ${FONT_SIZE / 3}px 0 0`,
   backgroundColor: withTransparency((palette[color] as Color)[200], 75),
+  "&:hover": {
+    boxShadow: `${withTransparency((palette[color] as Color)[100], 75)} 0 ${FONT_SIZE / 3}px 0 0`,
+  },
   "&.Mui-disabled": {
     backgroundColor: withTransparency((palette.grey as Color)[50], 75),
     color: (palette.grey as Color)[300],
@@ -47,7 +50,7 @@ export const ActionOutline = (color: ActionPaletteColor, palette: PaletteOptions
   borderWidth: "thin",
   borderStyle: "solid",
   borderColor: "currentColor",
-  backgroundColor: withTransparency(palette.grey!["50"]!, 25),
+  backgroundColor: withTransparency(palette.grey!["50"]!, 75),
   boxShadow: `${withTransparency((palette[color] as Color)[100], 75)} 0 ${FONT_SIZE / 3}px 0 0`,
   "&.Mui-disabled": {
     backgroundColor: withTransparency((palette.grey as Color)[50], 75),
@@ -74,7 +77,12 @@ export const ActionGradient = (color: ActionPaletteColor, palette: PaletteOption
       bottom: 0,
       borderRadius: "inherit",
       display: "block",
-      backgroundImage: `linear-gradient(45deg, ${(palette[color] as Color)[50]} 0%, ${(palette[color] as Color)[200]} 25%,${(palette[color] as Color)["A400"]} 100%)`,
+      backgroundImage: `linear-gradient(
+        45deg, 
+        ${(palette[color] as Color)[100]} 0%, 
+        ${(palette[color] as Color)[200]} 25%,
+        ${(palette[color] as Color)["A400"]} 100%
+      )`,
       boxShadow: `${withTransparency((palette[color] as Color)["A700"], 50)} 0 0 0.2rem 0 inset`,
       zIndex: -1,
       opacity: 0.75,
@@ -92,10 +100,10 @@ export const ActionGlow = (color: ActionPaletteColor, palette: PaletteOptions = 
   const base = ActionBase(color, palette);
   return {
     ...base,
-    boxShadow: `${withTransparency((palette[color] as Color)[400], 33)} 0 0 ${SPACINGS.BASE * 4}px 0, ${base.boxShadow}`,
+    boxShadow: `${withTransparency((palette[color] as Color)[500], 33)} 0 0 ${SPACINGS.BASE * 4}px 0, ${base.boxShadow}`,
     "&:hover": {
       ...(base["&:hover"] ?? {}),
-      boxShadow: `${withTransparency((palette[color] as Color)[400], 50)} 0 0 ${SPACINGS.BASE * 4}px 0, ${base.boxShadow}`,
+      boxShadow: `${withTransparency((palette[color] as Color)[500], 50)} 0 0 ${SPACINGS.BASE * 4}px 0, ${base.boxShadow}`,
     },
   };
 };
@@ -104,10 +112,10 @@ export const ActionGradientGlow = (color: ActionPaletteColor, palette: PaletteOp
   const base = ActionGradient(color, palette);
   return {
     ...base,
-    boxShadow: `${withTransparency((palette[color] as Color)[400], 33)} 0 0 ${SPACINGS.BASE * 4}px 0, ${base.boxShadow}`,
+    boxShadow: `${withTransparency((palette[color] as Color)[500], 33)} 0 0 ${SPACINGS.BASE * 4}px 0, ${base.boxShadow}`,
     "&:hover": {
       ...(base["&:hover"] ?? {}),
-      boxShadow: `${withTransparency((palette[color] as Color)[400], 50)} 0 0 ${SPACINGS.BASE * 4}px 0, ${base.boxShadow}`,
+      boxShadow: `${withTransparency((palette[color] as Color)[500], 50)} 0 0 ${SPACINGS.BASE * 4}px 0, ${base.boxShadow}`,
     },
   };
 };

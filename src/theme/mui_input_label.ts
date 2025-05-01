@@ -1,6 +1,6 @@
 import { Components, Theme } from "@mui/material";
 
-import { FONT_SIZE, SPACINGS } from "./sizes";
+import { SPACINGS } from "./sizes";
 
 export const MuiInputLabel: Components<Theme>["MuiInputLabel"] = {
   defaultProps: {
@@ -16,7 +16,6 @@ export const MuiInputLabel: Components<Theme>["MuiInputLabel"] = {
       flexDirection: "row",
       gap: SPACINGS.SMALL,
       lineHeight: "1.3em",
-      fontSize: FONT_SIZE,
       verticalAlign: "middle",
     },
   },

@@ -1,6 +1,6 @@
 import { Components, Theme } from "@mui/material";
 
-import { FONT_SIZE, SPACINGS } from "./sizes";
+import { SPACINGS } from "./sizes";
 
 export const MuiFormHelperText: Components<Theme>["MuiFormHelperText"] = {
   defaultProps: {
@@ -15,8 +15,6 @@ export const MuiFormHelperText: Components<Theme>["MuiFormHelperText"] = {
       justifyContent: "flex-start",
       flexDirection: "row",
       gap: SPACINGS.SMALL,
-      lineHeight: "1.3em",
-      fontSize: FONT_SIZE,
       verticalAlign: "middle",
       margin: 0,
     },

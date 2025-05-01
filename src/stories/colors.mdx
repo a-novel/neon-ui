@@ -1,0 +1,17 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
+
+import { palette } from "../theme/palette.js";
+
+<Meta title="Colors" />
+
+<ColorPalette>
+  <ColorItem title="palette.primary" colors={palette.primary} />
+  <ColorItem title="palette.secondary" colors={palette.secondary} />
+  <ColorItem title="palette.error" colors={palette.error} />
+  <ColorItem title="palette.warning" colors={palette.warning} />
+  <ColorItem title="palette.info" colors={palette.info} />
+  <ColorItem title="palette.success" colors={palette.success} />
+  <ColorItem title="palette.grey" colors={palette.grey} />
+  <ColorItem title="palette.text" colors={palette.text} />
+  <ColorItem title="palette.background" colors={palette.background} />
+</ColorPalette>

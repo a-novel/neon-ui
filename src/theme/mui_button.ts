@@ -14,7 +14,7 @@ declare module "@mui/material" {
   }
 }
 
-const buttonVariantVariant = (
+const buttonVariant = (
   baseStyle: CSSObject,
   props: Partial<ButtonProps>
 ): ArrayElement<ComponentsVariants<Theme>["MuiButton"]> => ({
@@ -57,29 +57,29 @@ export const MuiButton: Components<Theme>["MuiButton"] = {
     color: "primary",
   },
   variants: [
-    buttonVariantVariant(ActionGradient("primary", basePalette), { variant: "gradient", color: "primary" }),
-    buttonVariantVariant(ActionGradient("secondary", basePalette), { variant: "gradient", color: "secondary" }),
-    buttonVariantVariant(ActionGradient("error", basePalette), { variant: "gradient", color: "error" }),
-    buttonVariantVariant(ActionGradient("success", basePalette), { variant: "gradient", color: "success" }),
-    buttonVariantVariant(ActionGradient("info", basePalette), { variant: "gradient", color: "info" }),
-    buttonVariantVariant(ActionGradient("warning", basePalette), { variant: "gradient", color: "warning" }),
+    buttonVariant(ActionGradient("primary", basePalette), { variant: "gradient", color: "primary" }),
+    buttonVariant(ActionGradient("secondary", basePalette), { variant: "gradient", color: "secondary" }),
+    buttonVariant(ActionGradient("error", basePalette), { variant: "gradient", color: "error" }),
+    buttonVariant(ActionGradient("success", basePalette), { variant: "gradient", color: "success" }),
+    buttonVariant(ActionGradient("grey", basePalette), { variant: "gradient", color: "info" }),
+    buttonVariant(ActionGradient("warning", basePalette), { variant: "gradient", color: "warning" }),
 
-    buttonVariantVariant(ActionGlow("primary", basePalette), { variant: "glow", color: "primary" }),
-    buttonVariantVariant(ActionGlow("secondary", basePalette), { variant: "glow", color: "secondary" }),
-    buttonVariantVariant(ActionGlow("error", basePalette), { variant: "glow", color: "error" }),
-    buttonVariantVariant(ActionGlow("success", basePalette), { variant: "glow", color: "success" }),
-    buttonVariantVariant(ActionGlow("info", basePalette), { variant: "glow", color: "info" }),
-    buttonVariantVariant(ActionGlow("warning", basePalette), { variant: "glow", color: "warning" }),
+    buttonVariant(ActionGlow("primary", basePalette), { variant: "glow", color: "primary" }),
+    buttonVariant(ActionGlow("secondary", basePalette), { variant: "glow", color: "secondary" }),
+    buttonVariant(ActionGlow("error", basePalette), { variant: "glow", color: "error" }),
+    buttonVariant(ActionGlow("success", basePalette), { variant: "glow", color: "success" }),
+    buttonVariant(ActionGlow("grey", basePalette), { variant: "glow", color: "info" }),
+    buttonVariant(ActionGlow("warning", basePalette), { variant: "glow", color: "warning" }),
 
-    buttonVariantVariant(ActionGradientGlow("primary", basePalette), { variant: "gradient-glow", color: "primary" }),
-    buttonVariantVariant(ActionGradientGlow("secondary", basePalette), {
+    buttonVariant(ActionGradientGlow("primary", basePalette), { variant: "gradient-glow", color: "primary" }),
+    buttonVariant(ActionGradientGlow("secondary", basePalette), {
       variant: "gradient-glow",
       color: "secondary",
     }),
-    buttonVariantVariant(ActionGradientGlow("error", basePalette), { variant: "gradient-glow", color: "error" }),
-    buttonVariantVariant(ActionGradientGlow("success", basePalette), { variant: "gradient-glow", color: "success" }),
-    buttonVariantVariant(ActionGradientGlow("info", basePalette), { variant: "gradient-glow", color: "info" }),
-    buttonVariantVariant(ActionGradientGlow("warning", basePalette), { variant: "gradient-glow", color: "warning" }),
+    buttonVariant(ActionGradientGlow("error", basePalette), { variant: "gradient-glow", color: "error" }),
+    buttonVariant(ActionGradientGlow("success", basePalette), { variant: "gradient-glow", color: "success" }),
+    buttonVariant(ActionGradientGlow("grey", basePalette), { variant: "gradient-glow", color: "info" }),
+    buttonVariant(ActionGradientGlow("warning", basePalette), { variant: "gradient-glow", color: "warning" }),
 
     buttonTextVariant(basePalette, "primary"),
     buttonTextVariant(basePalette, "secondary"),
@@ -102,19 +102,19 @@ export const MuiButton: Components<Theme>["MuiButton"] = {
       userSelect: "none",
       cursor: "pointer",
       variants: [
-        buttonVariantVariant(ActionBase("primary", basePalette), { variant: "contained", color: "primary" }),
-        buttonVariantVariant(ActionBase("secondary", basePalette), { variant: "contained", color: "secondary" }),
-        buttonVariantVariant(ActionBase("error", basePalette), { variant: "contained", color: "error" }),
-        buttonVariantVariant(ActionBase("success", basePalette), { variant: "contained", color: "success" }),
-        buttonVariantVariant(ActionBase("info", basePalette), { variant: "contained", color: "info" }),
-        buttonVariantVariant(ActionBase("warning", basePalette), { variant: "contained", color: "warning" }),
+        buttonVariant(ActionBase("primary", basePalette), { variant: "contained", color: "primary" }),
+        buttonVariant(ActionBase("secondary", basePalette), { variant: "contained", color: "secondary" }),
+        buttonVariant(ActionBase("error", basePalette), { variant: "contained", color: "error" }),
+        buttonVariant(ActionBase("success", basePalette), { variant: "contained", color: "success" }),
+        buttonVariant(ActionBase("grey", basePalette), { variant: "contained", color: "info" }),
+        buttonVariant(ActionBase("warning", basePalette), { variant: "contained", color: "warning" }),
 
-        buttonVariantVariant(ActionOutline("primary", basePalette), { variant: "outlined", color: "primary" }),
-        buttonVariantVariant(ActionOutline("secondary", basePalette), { variant: "outlined", color: "secondary" }),
-        buttonVariantVariant(ActionOutline("error", basePalette), { variant: "outlined", color: "error" }),
-        buttonVariantVariant(ActionOutline("success", basePalette), { variant: "outlined", color: "success" }),
-        buttonVariantVariant(ActionOutline("grey", basePalette), { variant: "outlined", color: "info" }),
-        buttonVariantVariant(ActionOutline("warning", basePalette), { variant: "outlined", color: "warning" }),
+        buttonVariant(ActionOutline("primary", basePalette), { variant: "outlined", color: "primary" }),
+        buttonVariant(ActionOutline("secondary", basePalette), { variant: "outlined", color: "secondary" }),
+        buttonVariant(ActionOutline("error", basePalette), { variant: "outlined", color: "error" }),
+        buttonVariant(ActionOutline("success", basePalette), { variant: "outlined", color: "success" }),
+        buttonVariant(ActionOutline("grey", basePalette), { variant: "outlined", color: "info" }),
+        buttonVariant(ActionOutline("warning", basePalette), { variant: "outlined", color: "warning" }),
       ],
     },
   },

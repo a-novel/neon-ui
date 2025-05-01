@@ -11,8 +11,10 @@
     "lint": "pnpm lint:stylecheck && pnpm lint:typecheck && pnpm lint:eslint",
     "format": "prettier --write . --config prettier.config.ts",
     "build": "rm -rf ./dist && vite build && tsc --build tsconfig.build.json",
-    "storybook:dev": "dotenvx run -f .env.dev -- storybook dev -p 6006",
-    "storybook:build": "storybook build"
+    "storybook:dev": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "author": "A-Novel",
   "license": "AGPL-3.0",
@@ -34,10 +36,27 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
+  "dependencies": {
+    "@fontsource/arimo": "^5.2.5",
+    "@fontsource/bungee": "^5.2.5"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui-symbols-material/w400": "^0.4.1",
+    "@mui/material": "^7.0.2",
+    "react": "^19.1.0"
+  },
   "devDependencies": {
     "@eslint/js": "^9.25.1",
+    "@storybook/addon-essentials": "^8.6.12",
+    "@storybook/addon-interactions": "^8.6.12",
+    "@storybook/addon-onboarding": "^8.6.12",
+    "@storybook/addon-themes": "^8.6.12",
+    "@storybook/blocks": "^8.6.12",
     "@storybook/react": "^8.6.12",
     "@storybook/react-vite": "^8.6.12",
+    "@storybook/test": "^8.6.12",
     "@storybook/theming": "^8.6.12",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/react": "^19.1.2",
@@ -46,19 +65,14 @@
     "eslint-plugin-prettier": "^5.2.6",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-storybook": "^0.12.0",
     "globals": "^16.0.0",
     "prettier": "^3.5.3",
+    "storybook": "^8.6.12",
     "typescript": "~5.7.3",
     "typescript-eslint": "^8.31.1",
     "vite": "^6.3.4",
     "vite-tsconfig-paths": "^5.1.4"
-  },
-  "peerDependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@mui/material": "^7.0.2",
-    "react": "^19.1.0",
-    "@mui-symbols-material/w400": "^0.4.1"
   },
   "packageManager": "pnpm@10.10.0",
   "engines": {
