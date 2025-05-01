@@ -12,16 +12,9 @@ export interface StatusPageProps {
 }
 
 export const StatusPage = ({ icon, children, footer, color }: StatusPageProps) => (
-  <Stack
-    component="main"
-    direction="column"
-    alignItems="center"
-    justifyContent="center"
-    flexGrow={1}
-    padding={0}
-    gap={0}
-  >
+  <Stack direction="column" alignItems="center" justifyContent="center" flexGrow={1} padding={0} gap={0}>
     <Stack
+      component="main"
       direction="column"
       alignItems="center"
       justifyContent="center"

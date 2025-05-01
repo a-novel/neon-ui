@@ -67,13 +67,17 @@ export const palette: PaletteOptions = {
     A100: "#00473e",
   },
   success: {
-    main: "#00ff00",
+    main: "#2FF53D",
     500: "#2FF53D",
     400: "#0ad018",
     300: "#08ba15",
     200: "#068b10",
     100: "#045e0a",
     50: "#034508",
+    A700: "#C4F52F",
+    A400: "#9fd00a",
+    A200: "#6a8b06",
+    A100: "#354503",
   },
   mode: "dark",
   common: {
@@ -83,10 +87,14 @@ export const palette: PaletteOptions = {
   grey: {
     500: "#d3d9dc",
     400: "#9ea8ae",
-    300: "#8d8f91",
-    200: "#5a6872",
-    100: "#445b6a",
-    50: "#11202A",
+    300: "#8c9aa4",
+    200: "#566976",
+    100: "#404e58",
+    50: "#1d2328",
+    A700: "#bfbfbf",
+    A400: "#7f7f7f",
+    A200: "#4f4f4f",
+    A100: "#2f2f2f",
   },
   text: {
     primary: "#ffffff",
@@ -95,7 +103,7 @@ export const palette: PaletteOptions = {
   },
   background: {
     default: "#000000",
-    paper: "#092837",
+    paper: "#1d2328",
   },
 };
 

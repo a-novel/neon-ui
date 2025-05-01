@@ -7,11 +7,8 @@ const config: Config = {
   singleQuote: false,
   printWidth: 120,
   importOrder: [
-    // Test imports are always first.
-    "^#/",
     // App imports.
     "^@/",
-    "^~/",
     // Static assets.
     "^(.*).(css|yaml|json)$",
     "^(.*).(svg|png|jpg|jpeg)$",

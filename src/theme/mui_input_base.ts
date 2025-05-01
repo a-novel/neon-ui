@@ -7,6 +7,9 @@ import { FONT_SIZE, SPACINGS } from "./sizes";
 export const MuiInputBase: Components<Theme>["MuiInputBase"] = {
   styleOverrides: {
     root: {
+      "&.Mui-error": {
+        ...ActionBase("error", palette),
+      },
       ".MuiOutlinedInput-notchedOutline": {
         display: "none",
       },

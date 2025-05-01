@@ -1,8 +1,8 @@
-import { CheckOutlined } from "@mui-symbols-material/w400";
-import { Button } from "@mui/material";
-import { Meta, StoryObj } from "@storybook/react";
+import { StatusPage } from "@/index";
 
-import { StatusPage } from "../../src";
+import { CheckOutlined } from "@mui-symbols-material/w400";
+import { Button, Stack } from "@mui/material";
+import { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof StatusPage> = {
   component: StatusPage,
@@ -16,9 +16,9 @@ const meta: Meta<typeof StatusPage> = {
   },
   tags: ["autodocs"],
   render: (args) => (
-    <div style={{ height: "60rem" }}>
+    <Stack height="60rem" direction="column">
       <StatusPage {...args} />
-    </div>
+    </Stack>
   ),
 };
 

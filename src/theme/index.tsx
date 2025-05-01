@@ -1,6 +1,16 @@
-import { ComponentType } from "react";
+import { MuiAppBar } from "@/theme/mui_app_bar";
 
-import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+import "@fontsource/arimo/400-italic.css";
+import "@fontsource/arimo/400.css";
+import "@fontsource/arimo/500-italic.css";
+import "@fontsource/arimo/500.css";
+import "@fontsource/arimo/600-italic.css";
+import "@fontsource/arimo/600.css";
+import "@fontsource/arimo/700-italic.css";
+import "@fontsource/arimo/700.css";
+import "@fontsource/bungee/400.css";
+
+import { createTheme } from "@mui/material";
 
 import { MuiButton } from "./mui_button";
 import { MuiFormHelperText } from "./mui_form_helper_text";
@@ -23,12 +33,6 @@ export const theme = createTheme({
     MuiInputBase,
     MuiFormHelperText,
     MuiPopover,
+    MuiAppBar,
   },
 });
-
-export const withMuiTheme = (Component: ComponentType) => (
-  <ThemeProvider theme={theme}>
-    <CssBaseline />
-    <Component />
-  </ThemeProvider>
-);

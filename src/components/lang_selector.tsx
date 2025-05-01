@@ -1,6 +1,6 @@
-import { MenuItem, Select, SelectProps, Stack } from "@mui/material";
+import { SPACINGS } from "@/theme/sizes";
 
-import { SPACINGS } from "../theme/sizes";
+import { MenuItem, Select, SelectProps, Stack } from "@mui/material";
 
 export interface CountryType {
   displayCode: string;
@@ -19,7 +19,7 @@ export const LangSelector = <Langs extends Record<string, CountryType>>({
   langs,
   selectedLang,
   onChange,
-  MenuProps,
+  fullWidth,
   ...props
 }: LangSelectorProps<Langs>) => {
   if (!selectedLang) {
@@ -30,6 +30,7 @@ export const LangSelector = <Langs extends Record<string, CountryType>>({
 
   return (
     <Select
+      fullWidth={fullWidth}
       value={selectedLang}
       onChange={(e) => onChange(e.target.value as keyof Langs)}
       renderValue={() => (
@@ -41,13 +42,9 @@ export const LangSelector = <Langs extends Record<string, CountryType>>({
             src={`https://flagcdn.com/w40/${currentLang.flag}.png`}
             alt={currentLang.label}
           />
-          {currentLang?.displayCode}
+          {fullWidth ? currentLang?.label : currentLang?.displayCode}
         </Stack>
       )}
-      MenuProps={{
-        anchorOrigin: { vertical: "bottom", horizontal: "right" },
-        ...MenuProps,
-      }}
       {...props}
     >
       {Object.entries(langs).map(([code, langInfo]) => (
