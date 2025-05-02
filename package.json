@@ -39,7 +39,7 @@
   "dependencies": {
     "@fontsource/arimo": "^5.2.5",
     "@fontsource/bungee": "^5.2.5",
-    "@mui-symbols-material/w400": "^0.4.1"
+    "@mui/icons-material": "^7.0.2"
   },
   "peerDependencies": {
     "@emotion/react": "^11.14.0",

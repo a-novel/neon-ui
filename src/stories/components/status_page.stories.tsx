@@ -1,6 +1,6 @@
 import { StatusPage } from "@/index";
 
-import { CheckOutlined } from "@mui-symbols-material/w400";
+import { CheckOutlined } from "@mui/icons-material";
 import { Button, Stack } from "@mui/material";
 import { Meta, StoryObj } from "@storybook/react";
 
