@@ -1,7 +1,7 @@
 import { InfoBox } from "@/components";
 import { SPACINGS } from "@/theme/sizes";
 
-import { InfoOutlined } from "@mui-symbols-material/w400";
+import { InfoOutlined } from "@mui/icons-material";
 import { Stack } from "@mui/material";
 import { Meta, StoryObj } from "@storybook/react";
 
