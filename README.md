@@ -18,7 +18,7 @@ Create a `.npmrc` file in the root of your project if it doesn't exist, and make
 Then, install the package using pnpm:
 
 ```bash
-pnpm add @a-novel/neon-ui @emotion/react @emotion/styled @mui/material react
+pnpm add @a-novel/neon-ui react react-dom @emotion/react @emotion/styled @mui/material
 ```
 
 You may create a `mui.d.ts` file at the root of your project with the following content:
