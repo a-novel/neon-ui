@@ -1,6 +1,7 @@
+import { ArrayElement } from "@/utils";
+
 import { ButtonProps, Color, Components, ComponentsVariants, CSSObject, PaletteOptions, Theme } from "@mui/material";
 
-import { ArrayElement } from "../utils";
 import { ActionBase, ActionGlow, ActionGradient, ActionGradientGlow, ActionOutline } from "./action";
 import { palette as basePalette } from "./palette";
 import { SPACINGS } from "./sizes";
