@@ -18,5 +18,20 @@ Create a `.npmrc` file in the root of your project if it doesn't exist, and make
 Then, install the package using pnpm:
 
 ```bash
-pnpm add @a-novel/neon-ui
+pnpm add @a-novel/neon-ui @emotion/react @emotion/styled @mui/material react
+```
+
+You may create a `mui.d.ts` file at the root of your project with the following content:
+
+```ts
+import "@mui/material";
+
+declare module "@mui/material" {
+  interface ButtonPropsVariantOverrides {
+    gradient: true;
+    glow: true;
+    "gradient-glow": true;
+    text: true;
+  }
+}
 ```
