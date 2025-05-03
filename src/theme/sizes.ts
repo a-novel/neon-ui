@@ -6,8 +6,6 @@ export const SPACINGS = {
   XLARGE: "48px",
 };
 
-export const FONT_SIZE = 16;
-
 /**
  * Use golden ratio scales. 1.27 is the root of the actual ratio, for smoother scaling.
  */

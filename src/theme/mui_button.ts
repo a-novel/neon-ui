@@ -3,7 +3,7 @@ import { ArrayElement } from "@/utils";
 import { ButtonProps, Color, Components, ComponentsVariants, CSSObject, PaletteOptions, Theme } from "@mui/material";
 
 import { ActionBase, ActionGlow, ActionGradient, ActionGradientGlow, ActionOutline } from "./action";
-import { palette as basePalette } from "./palette";
+import { palette as basePalette, withTransparency } from "./palette";
 import { SPACINGS } from "./sizes";
 
 declare module "@mui/material" {
@@ -12,6 +12,7 @@ declare module "@mui/material" {
     glow: true;
     "gradient-glow": true;
     text: true;
+    "list-item": true;
   }
 }
 
@@ -48,6 +49,33 @@ const buttonTextVariant = (
     transform: "none",
     backdropFilter: "none",
     fontSize: "inherit",
+  },
+});
+
+export const buttonListItemVariant = (
+  palette: PaletteOptions,
+  paletteColor: "primary" | "secondary" | "error" | "success" | "info" | "warning"
+): ArrayElement<ComponentsVariants<Theme>["MuiButton"]> => ({
+  props: { variant: "list-item", color: paletteColor },
+  style: {
+    padding: SPACINGS.MEDIUM,
+    borderRadius: SPACINGS.SMALL,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    gap: SPACINGS.SMALL,
+    flexDirection: "row",
+    transition: "linear 0.2s",
+    backgroundColor: "transparent",
+    color: paletteColor === "info" ? palette.text!.primary! : (palette[paletteColor] as Color)[500],
+    "&:hover": {
+      backgroundColor: withTransparency((palette.grey as Color)[200], 66),
+      transition: "linear 0s",
+    },
+    "&.Mui-selected,&:active,&[aria-selected=true]": {
+      backgroundColor: `${(palette[paletteColor] as Color)[300]}!important`,
+      color: palette.text!.primary!,
+    },
   },
 });
 
@@ -88,6 +116,13 @@ export const MuiButton: Components<Theme>["MuiButton"] = {
     buttonTextVariant(basePalette, "success"),
     buttonTextVariant(basePalette, "info"),
     buttonTextVariant(basePalette, "warning"),
+
+    buttonListItemVariant(basePalette, "primary"),
+    buttonListItemVariant(basePalette, "secondary"),
+    buttonListItemVariant(basePalette, "error"),
+    buttonListItemVariant(basePalette, "success"),
+    buttonListItemVariant(basePalette, "info"),
+    buttonListItemVariant(basePalette, "warning"),
   ],
   styleOverrides: {
     root: {

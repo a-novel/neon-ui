@@ -10,7 +10,7 @@ import "@fontsource/arimo/700-italic.css";
 import "@fontsource/arimo/700.css";
 import "@fontsource/bungee/400.css";
 
-import { createTheme } from "@mui/material";
+import { createTheme, responsiveFontSizes } from "@mui/material";
 
 import { MuiButton } from "./mui_button";
 import { MuiFormHelperText } from "./mui_form_helper_text";
@@ -22,7 +22,7 @@ import { palette } from "./palette";
 import { SPACINGS } from "./sizes";
 import { typography } from "./typography";
 
-export const theme = createTheme({
+let theme = createTheme({
   palette,
   spacing: SPACINGS.BASE,
   typography,
@@ -36,3 +36,7 @@ export const theme = createTheme({
     MuiAppBar,
   },
 });
+
+theme = responsiveFontSizes(theme);
+
+export { theme };

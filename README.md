@@ -32,6 +32,7 @@ declare module "@mui/material" {
     glow: true;
     "gradient-glow": true;
     text: true;
+    "list-item": true;
   }
 }
 ```

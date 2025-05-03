@@ -14,9 +14,16 @@ const meta: Meta<typeof NavBar> = {
   },
   tags: ["autodocs"],
   render: (args) => (
-    <Stack direction="column" gap={SPACINGS.LARGE} padding={0} maxHeight="20rem" overflow="auto">
+    <Stack
+      direction="column"
+      gap={SPACINGS.LARGE}
+      padding={0}
+      minHeight="100vh"
+      boxSizing="border-box"
+      overflow="visible"
+    >
       <NavBar {...args} />
-      <Typography>
+      <Typography padding="1rem">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -70,7 +77,13 @@ export const WithNav: Story = {
       selectedLang: "fr",
       onChange: () => null,
     },
-    nav: [{ children: "Home" }, { children: "Dashboard" }, { children: "Subscription", color: "error" }],
+    nav: [
+      { key: "home", children: "Home", color: "info", activeColor: "primary" },
+      { key: "dashboard", children: "Dashboard", active: true, color: "info", activeColor: "primary" },
+      { key: "settings", children: "Settings", color: "info" },
+      { key: "profile", children: "Profile", color: "info" },
+      { key: "subscription", children: "Subscription", color: "error" },
+    ],
   },
 };
 
@@ -85,5 +98,6 @@ export const WithDesktopActions: Story = {
       onChange: () => null,
     },
     desktopActions: <Avatar sx={{ bgcolor: deepOrange[500] }}>U</Avatar>,
+    mobileActions: <Avatar sx={{ bgcolor: deepOrange[500] }}>U</Avatar>,
   },
 };

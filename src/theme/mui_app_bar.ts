@@ -38,6 +38,9 @@ export const MuiAppBar: Components<Theme>["MuiAppBar"] = {
       flexWrap: "nowrap",
       alignSelf: "stretch",
       width: "100%",
+      maxWidth: "100vw",
+      overflow: "auto",
+      boxSizing: "border-box",
       color: palette.text!.primary!,
     },
     colorTransparent: {

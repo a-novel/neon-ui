@@ -1,17 +1,17 @@
 import { Color, CSSObject, PaletteOptions } from "@mui/material";
 
 import { palette as basePalette, withTransparency } from "./palette";
-import { FONT_SIZE, SPACINGS } from "./sizes";
+import { SPACINGS } from "./sizes";
 
 export type ActionPaletteColor = "primary" | "secondary" | "error" | "warning" | "info" | "success" | "grey";
 
 export const ActionBase = (color: ActionPaletteColor, palette: PaletteOptions = basePalette): CSSObject => ({
   transformOrigin: "center",
-  transform: `translateY(-${FONT_SIZE / 3}px)`,
+  transform: `translateY(calc(-1/3 * 1em))`,
   transition: "linear 0.15s",
-  marginTop: 0.15 * FONT_SIZE,
+  marginTop: "calc(1/6 * 1em)",
   position: "relative",
-  backdropFilter: `saturate(75%) blur(${FONT_SIZE / 3}px)`,
+  backdropFilter: `saturate(75%) blur(calc(1/3 * 1em))`,
   borderRadius: SPACINGS.SMALL,
   zIndex: 2, // Elevate the box on the z-plane to allow for background effects.
   outline: "none",
@@ -20,10 +20,10 @@ export const ActionBase = (color: ActionPaletteColor, palette: PaletteOptions = 
   borderWidth: "0 0 1px 0",
   borderStyle: "solid",
   borderColor: withTransparency((palette[color] as Color)[50], 66),
-  boxShadow: `${withTransparency((palette[color] as Color)[100], 75)} 0 ${FONT_SIZE / 3}px 0 0`,
+  boxShadow: `${withTransparency((palette[color] as Color)[100], 75)} 0 calc(1/3 * 1em) 0 0`,
   backgroundColor: withTransparency((palette[color] as Color)[200], 75),
   "&:hover": {
-    boxShadow: `${withTransparency((palette[color] as Color)[100], 75)} 0 ${FONT_SIZE / 3}px 0 0`,
+    boxShadow: `${withTransparency((palette[color] as Color)[100], 75)} 0 calc(1/3 * 1em) 0 0`,
   },
   "&.Mui-disabled": {
     backgroundColor: withTransparency((palette.grey as Color)[50], 75),
@@ -37,11 +37,11 @@ export const ActionBase = (color: ActionPaletteColor, palette: PaletteOptions = 
 
 export const ActionOutline = (color: ActionPaletteColor, palette: PaletteOptions = basePalette): CSSObject => ({
   transformOrigin: "center",
-  transform: `translateY(-${FONT_SIZE / 3}px)`,
+  transform: `translateY(calc(-1/3 * 1em))`,
   transition: "linear 0.15s",
-  marginTop: 0.15 * FONT_SIZE,
+  marginTop: "calc(1/6 * 1em)",
   position: "relative",
-  backdropFilter: `saturate(75%) blur(${FONT_SIZE / 3}px)`,
+  backdropFilter: `saturate(75%) blur(calc(1/3 * 1em))`,
   borderRadius: SPACINGS.SMALL,
   zIndex: 2, // Elevate the box on the z-plane to allow for background effects.
   outline: "none",
@@ -51,7 +51,7 @@ export const ActionOutline = (color: ActionPaletteColor, palette: PaletteOptions
   borderStyle: "solid",
   borderColor: "currentColor",
   backgroundColor: withTransparency(palette.grey!["50"]!, 75),
-  boxShadow: `${withTransparency((palette[color] as Color)[100], 75)} 0 ${FONT_SIZE / 3}px 0 0`,
+  boxShadow: `${withTransparency((palette[color] as Color)[100], 75)} 0 calc(1/3 * 1em) 0 0`,
   "&.Mui-disabled": {
     backgroundColor: withTransparency((palette.grey as Color)[50], 75),
     color: (palette.grey as Color)[300],
