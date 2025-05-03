@@ -14,6 +14,8 @@ jobs:
       contents: read
     steps:
       - uses: a-novel-kit/workflows/node-actions/lint-node@master
+        with:
+          pat: ${{ secrets.ACTION_PAT }}
 
   build:
     needs:
@@ -24,6 +26,8 @@ jobs:
       packages: write
     steps:
       - uses: a-novel-kit/workflows/node-actions/build-node@master
+        with:
+          pat: ${{ secrets.ACTION_PAT }}
 
   auto-tag:
     if: github.ref == 'refs/heads/master' && success()
