@@ -146,6 +146,53 @@ export const GradientGlow: Story = {
   ),
 };
 
+export const ListItem: Story = {
+  render: (args) => (
+    <Stack direction="column" gap={SPACINGS.LARGE}>
+      <Stack direction="row" gap={SPACINGS.LARGE}>
+        <Button variant="list-item" color="primary" {...args}>
+          Click me !
+        </Button>
+        <Button variant="list-item" color="secondary" {...args}>
+          Click me !
+        </Button>
+        <Button variant="list-item" color="error" {...args}>
+          Click me !
+        </Button>
+        <Button variant="list-item" color="success" {...args}>
+          Click me !
+        </Button>
+        <Button variant="list-item" color="info" {...args}>
+          Click me !
+        </Button>
+        <Button variant="list-item" color="warning" {...args}>
+          Click me !
+        </Button>
+      </Stack>
+      <Stack direction="row" gap={SPACINGS.LARGE}>
+        <Button aria-selected variant="list-item" color="primary" {...args}>
+          Click me !
+        </Button>
+        <Button aria-selected variant="list-item" color="secondary" {...args}>
+          Click me !
+        </Button>
+        <Button aria-selected variant="list-item" color="error" {...args}>
+          Click me !
+        </Button>
+        <Button aria-selected variant="list-item" color="success" {...args}>
+          Click me !
+        </Button>
+        <Button aria-selected variant="list-item" color="info" {...args}>
+          Click me !
+        </Button>
+        <Button aria-selected variant="list-item" color="warning" {...args}>
+          Click me !
+        </Button>
+      </Stack>
+    </Stack>
+  ),
+};
+
 export const Text: Story = {
   render: (args) => (
     <Stack direction="row" gap={SPACINGS.LARGE}>

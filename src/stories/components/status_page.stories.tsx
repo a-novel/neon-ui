@@ -16,7 +16,7 @@ const meta: Meta<typeof StatusPage> = {
   },
   tags: ["autodocs"],
   render: (args) => (
-    <Stack height="60rem" direction="column">
+    <Stack minHeight="100vh" padding={0} boxSizing="border-box" direction="column">
       <StatusPage {...args} />
     </Stack>
   ),
