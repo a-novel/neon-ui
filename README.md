@@ -21,18 +21,24 @@ Then, install the package using pnpm:
 pnpm add @a-novel/neon-ui react react-dom @emotion/react @emotion/styled @mui/material
 ```
 
+## Extra steps
+
 You may create a `mui.d.ts` file at the root of your project with the following content:
 
 ```ts
+import type { NeonMUIVariants } from "@a-novel/neon-ui";
 import "@mui/material";
 
 declare module "@mui/material" {
-  interface ButtonPropsVariantOverrides {
-    gradient: true;
-    glow: true;
-    "gradient-glow": true;
-    text: true;
-    "list-item": true;
-  }
+  //eslint-disable-next-line @typescript-eslint/no-empty-object-type
+  interface ButtonPropsVariantOverrides extends NeonMUIVariants {}
+}
+```
+
+Make sure this file is included in the `tsconfig.json`:
+
+```json
+{
+  "include": [..., "mui.d.ts"]
 }
 ```

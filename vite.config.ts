@@ -1,4 +1,4 @@
-import { peerDependencies } from "./package.json";
+import { peerDependencies, name } from "./package.json";
 
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
@@ -9,7 +9,7 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       entry: "src/index.ts",
-      name: "@a-novel/neon-ui",
+      name,
       formats: ["es"],
       fileName: (format) => `index.${format}.js`,
     },
