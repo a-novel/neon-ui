@@ -46,6 +46,7 @@ export const LangSelector = <Langs extends Record<string, CountryType>>({
         </Stack>
       )}
       {...props}
+      inputProps={{ IconComponent: () => null, ...props.inputProps }}
     >
       {Object.entries(langs).map(([code, langInfo]) => (
         <MenuItem key={code} value={code} sx={{ "& > img": { flexShrink: 0 } }}>

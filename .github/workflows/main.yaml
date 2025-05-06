@@ -43,6 +43,7 @@ jobs:
           pat: ${{ secrets.ACTION_PAT }}
 
   pages:
+    if: github.ref == 'refs/heads/master' && success()
     needs:
       - build
     runs-on: ubuntu-latest
