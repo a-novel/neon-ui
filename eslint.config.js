@@ -2,6 +2,7 @@ import js from "@eslint/js";
 import pluginPrettier from "eslint-plugin-prettier/recommended";
 import pluginReact from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
+import storybookEslint from "eslint-plugin-storybook";
 import { defineConfig, globalIgnores } from "eslint/config";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -13,7 +14,7 @@ export default defineConfig([
     plugins: { js },
     extends: ["js/recommended"],
   },
-  globalIgnores(["dist/*"]),
+  globalIgnores(["dist/*", " storybook-static/*"]),
   tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   reactHooks.configs["recommended-latest"],
@@ -35,4 +36,5 @@ export default defineConfig([
     },
   },
   pluginPrettier,
+  ...storybookEslint.configs["flat/recommended"],
 ]);
