@@ -22,7 +22,7 @@ import { palette } from "./palette";
 import { SPACINGS } from "./sizes";
 import { typography } from "./typography";
 
-export type { NeonMUIVariants } from "./mui_button";
+export type { NeonUIButtonVariants } from "./mui_button";
 
 let theme = createTheme({
   palette,
