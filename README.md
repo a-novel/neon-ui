@@ -21,17 +21,17 @@ Then, install the package using pnpm:
 pnpm add @a-novel/neon-ui react react-dom @emotion/react @emotion/styled @mui/material
 ```
 
-## Extra steps
+## Usage
 
 You may create a `mui.d.ts` file at the root of your project with the following content:
 
 ```ts
-import type { NeonMUIVariants } from "@a-novel/neon-ui";
+import type { NeonUIButtonVariants } from "@a-novel/neon-ui";
 import "@mui/material";
 
 declare module "@mui/material" {
   //eslint-disable-next-line @typescript-eslint/no-empty-object-type
-  interface ButtonPropsVariantOverrides extends NeonMUIVariants {}
+  interface ButtonPropsVariantOverrides extends NeonUIButtonVariants {}
 }
 ```
 
@@ -41,4 +41,20 @@ Make sure this file is included in the `tsconfig.json`:
 {
   "include": [..., "mui.d.ts"]
 }
+```
+
+Then, in your entry file.
+
+```tsx
+import { FC, ReactNode } from "react";
+
+import { theme } from "@a-novel/neon-ui";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+
+export const App: FC<{ children: ReactNode }> = ({ children }) => (
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
+    {children}
+  </ThemeProvider>
+);
 ```

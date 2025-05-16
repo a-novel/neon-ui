@@ -6,7 +6,7 @@ import { ActionBase, ActionGlow, ActionGradient, ActionGradientGlow, ActionOutli
 import { palette as basePalette, withTransparency } from "./palette";
 import { SPACINGS } from "./sizes";
 
-export interface NeonMUIVariants {
+export interface NeonUIButtonVariants {
   gradient: true;
   glow: true;
   "gradient-glow": true;
@@ -16,7 +16,7 @@ export interface NeonMUIVariants {
 
 declare module "@mui/material" {
   //eslint-disable-next-line @typescript-eslint/no-empty-object-type
-  interface ButtonPropsVariantOverrides extends NeonMUIVariants {}
+  interface ButtonPropsVariantOverrides extends NeonUIButtonVariants {}
 }
 
 const buttonVariant = (
