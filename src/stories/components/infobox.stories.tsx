@@ -1,7 +1,6 @@
-import { InfoBox } from "@/components";
+import { InfoBox, MaterialSymbol } from "@/components";
 import { SPACINGS } from "@/theme/sizes";
 
-import { InfoOutlined } from "@mui/icons-material";
 import { Stack } from "@mui/material";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -51,16 +50,16 @@ export const Variants: Story = {
 export const IconVariants: Story = {
   render: () => (
     <Stack direction="column" gap={SPACINGS.LARGE} padding={SPACINGS.LARGE}>
-      <InfoBox icon={<InfoOutlined />} color="primary">
+      <InfoBox icon={<MaterialSymbol icon="info" />} color="primary">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </InfoBox>
-      <InfoBox icon={<InfoOutlined />} color="secondary">
+      <InfoBox icon={<MaterialSymbol icon="info" />} color="secondary">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </InfoBox>
-      <InfoBox icon={<InfoOutlined />} color="error">
+      <InfoBox icon={<MaterialSymbol icon="info" />} color="error">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </InfoBox>
-      <InfoBox icon={<InfoOutlined />} color="success">
+      <InfoBox icon={<MaterialSymbol icon="info" />} color="success">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </InfoBox>
     </Stack>

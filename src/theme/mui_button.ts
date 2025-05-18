@@ -126,6 +126,20 @@ export const MuiButton: Components<Theme>["MuiButton"] = {
     buttonListItemVariant(basePalette, "success"),
     buttonListItemVariant(basePalette, "info"),
     buttonListItemVariant(basePalette, "warning"),
+
+    buttonVariant(ActionBase("primary", basePalette), { variant: "contained", color: "primary" }),
+    buttonVariant(ActionBase("secondary", basePalette), { variant: "contained", color: "secondary" }),
+    buttonVariant(ActionBase("error", basePalette), { variant: "contained", color: "error" }),
+    buttonVariant(ActionBase("success", basePalette), { variant: "contained", color: "success" }),
+    buttonVariant(ActionBase("grey", basePalette), { variant: "contained", color: "info" }),
+    buttonVariant(ActionBase("warning", basePalette), { variant: "contained", color: "warning" }),
+
+    buttonVariant(ActionOutline("primary", basePalette), { variant: "outlined", color: "primary" }),
+    buttonVariant(ActionOutline("secondary", basePalette), { variant: "outlined", color: "secondary" }),
+    buttonVariant(ActionOutline("error", basePalette), { variant: "outlined", color: "error" }),
+    buttonVariant(ActionOutline("success", basePalette), { variant: "outlined", color: "success" }),
+    buttonVariant(ActionOutline("grey", basePalette), { variant: "outlined", color: "info" }),
+    buttonVariant(ActionOutline("warning", basePalette), { variant: "outlined", color: "warning" }),
   ],
   styleOverrides: {
     root: {
@@ -140,21 +154,6 @@ export const MuiButton: Components<Theme>["MuiButton"] = {
       gap: SPACINGS.SMALL,
       userSelect: "none",
       cursor: "pointer",
-      variants: [
-        buttonVariant(ActionBase("primary", basePalette), { variant: "contained", color: "primary" }),
-        buttonVariant(ActionBase("secondary", basePalette), { variant: "contained", color: "secondary" }),
-        buttonVariant(ActionBase("error", basePalette), { variant: "contained", color: "error" }),
-        buttonVariant(ActionBase("success", basePalette), { variant: "contained", color: "success" }),
-        buttonVariant(ActionBase("grey", basePalette), { variant: "contained", color: "info" }),
-        buttonVariant(ActionBase("warning", basePalette), { variant: "contained", color: "warning" }),
-
-        buttonVariant(ActionOutline("primary", basePalette), { variant: "outlined", color: "primary" }),
-        buttonVariant(ActionOutline("secondary", basePalette), { variant: "outlined", color: "secondary" }),
-        buttonVariant(ActionOutline("error", basePalette), { variant: "outlined", color: "error" }),
-        buttonVariant(ActionOutline("success", basePalette), { variant: "outlined", color: "success" }),
-        buttonVariant(ActionOutline("grey", basePalette), { variant: "outlined", color: "info" }),
-        buttonVariant(ActionOutline("warning", basePalette), { variant: "outlined", color: "warning" }),
-      ],
     },
   },
 };

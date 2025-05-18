@@ -1,11 +1,11 @@
 import { CountryType, LangSelector, LangSelectorProps } from "@/components/lang_selector";
+import { MaterialSymbol } from "@/components/material_symbol";
 import { ZIndexes } from "@/theme/common";
 import { palette, palette as basePalette, withTransparency } from "@/theme/palette";
 import { SPACINGS } from "@/theme/sizes";
 
 import { ReactNode, useLayoutEffect, useRef, useState } from "react";
 
-import { Menu as MenuIcon } from "@mui/icons-material";
 import { AppBar, AppBarProps, Box, Button, ButtonProps, Divider, IconButton, Stack } from "@mui/material";
 
 export interface NavProps {
@@ -128,7 +128,7 @@ export const NavBar = <Langs extends Record<string, CountryType>>({
         </Stack>
 
         <IconButton sx={{ display: showBurger ? undefined : "none" }} onClick={() => setOpenBurger((prev) => !prev)}>
-          <MenuIcon />
+          <MaterialSymbol icon="menu" />
         </IconButton>
       </AppBar>
       <Stack

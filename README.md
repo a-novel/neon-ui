@@ -21,6 +21,12 @@ Then, install the package using pnpm:
 pnpm add @a-novel/neon-ui react react-dom @emotion/react @emotion/styled @mui/material
 ```
 
+You also need to import material symbols in your app.
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+```
+
 ## Usage
 
 You may create a `mui.d.ts` file at the root of your project with the following content:

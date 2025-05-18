@@ -3,7 +3,7 @@ import { SPACINGS } from "@/theme/sizes";
 
 import { ComponentProps, ReactNode } from "react";
 
-import { Color, Stack, Typography } from "@mui/material";
+import { Box, Color, Stack, Typography } from "@mui/material";
 
 export interface InfoboxProps extends ComponentProps<typeof Stack> {
   /**
@@ -48,11 +48,10 @@ export const InfoBox = ({ children, color, icon, ...props }: InfoboxProps) => (
       {children}
     </Typography>
     {icon && (
-      <Typography
+      <Box
         position="absolute"
         top="50%"
         right={SPACINGS.SMALL}
-        variant="h4"
         component="div"
         sx={{
           color: (palette[color] as Color)[100],
@@ -60,17 +59,16 @@ export const InfoBox = ({ children, color, icon, ...props }: InfoboxProps) => (
           transform: "translateY(-50%)",
           opacity: 0.4,
           userSelect: "none",
-          lineHeight: "1em",
-          height: "1em",
-          ".MuiSvgIcon-root": {
-            fontSize: "inherit",
-            margin: "auto",
-          },
+          lineHeight: "4rem",
+          fontSize: "4rem",
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
         }}
         zIndex={-1}
       >
         {icon}
-      </Typography>
+      </Box>
     )}
   </Stack>
 );
