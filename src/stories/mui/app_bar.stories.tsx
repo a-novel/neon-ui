@@ -1,7 +1,7 @@
-import { SPACINGS } from "@/theme/sizes";
-
 import { AppBar, Stack, Typography } from "@mui/material";
 import { Meta, StoryObj } from "@storybook/react";
+
+import { SPACINGS } from "../../theme/sizes";
 
 const meta: Meta<typeof AppBar> = {
   component: AppBar,

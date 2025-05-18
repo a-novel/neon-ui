@@ -1,8 +1,7 @@
-import { buttonListItemVariant } from "@/theme/mui_button";
-
 import { Components, Theme } from "@mui/material";
 
 import { ZIndexes } from "./common";
+import { buttonListItemVariant } from "./mui_button";
 import { palette as basePalette, withTransparency } from "./palette";
 import { SPACINGS } from "./sizes";
 
