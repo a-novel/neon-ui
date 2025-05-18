@@ -1,7 +1,7 @@
-import { MaterialSymbol, StatusPage } from "@/index";
-
 import { Button, Stack } from "@mui/material";
 import { Meta, StoryObj } from "@storybook/react";
+
+import { MaterialSymbol, StatusPage } from "../../index";
 
 const meta: Meta<typeof StatusPage> = {
   component: StatusPage,

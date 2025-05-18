@@ -1,11 +1,12 @@
-import logo from "@/assets/banner.png";
-import { NavBar } from "@/components";
-import { LANGS } from "@/stories/_common";
-import { SPACINGS } from "@/theme/sizes";
+import logo from "../../assets/banner.png";
 
 import { Avatar, Stack, Typography } from "@mui/material";
 import { deepOrange } from "@mui/material/colors";
 import { Meta, StoryObj } from "@storybook/react";
+
+import { NavBar } from "../../components";
+import { SPACINGS } from "../../theme/sizes";
+import { LANGS } from "../_common";
 
 const meta: Meta<typeof NavBar> = {
   component: NavBar,

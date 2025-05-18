@@ -1,8 +1,8 @@
-import { SPACINGS } from "@/theme/sizes";
-
 import { ReactNode } from "react";
 
 import { Stack, Typography } from "@mui/material";
+
+import { SPACINGS } from "../theme/sizes";
 
 export interface StatusPageProps {
   icon?: ReactNode;

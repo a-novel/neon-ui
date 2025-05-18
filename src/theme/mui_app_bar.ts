@@ -1,8 +1,8 @@
-import { ZIndexes } from "@/theme/common";
-import { palette, withTransparency } from "@/theme/palette";
-import { SPACINGS } from "@/theme/sizes";
-
 import { Color, Components, CSSObject, Theme } from "@mui/material";
+
+import { ZIndexes } from "./common";
+import { palette, withTransparency } from "./palette";
+import { SPACINGS } from "./sizes";
 
 const backgroundElementSx: CSSObject = {
   position: "absolute",

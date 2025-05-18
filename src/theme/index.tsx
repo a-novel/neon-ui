@@ -1,5 +1,3 @@
-import { MuiAppBar } from "@/theme/mui_app_bar";
-
 import "@fontsource/arimo/400-italic.css";
 import "@fontsource/arimo/400.css";
 import "@fontsource/arimo/500-italic.css";
@@ -12,6 +10,7 @@ import "@fontsource/bungee/400.css";
 
 import { createTheme, responsiveFontSizes } from "@mui/material";
 
+import { MuiAppBar } from "./mui_app_bar";
 import { MuiButton } from "./mui_button";
 import { MuiFormHelperText } from "./mui_form_helper_text";
 import { MuiInputBase } from "./mui_input_base";

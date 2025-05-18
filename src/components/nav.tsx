@@ -1,12 +1,12 @@
-import { CountryType, LangSelector, LangSelectorProps } from "@/components/lang_selector";
-import { MaterialSymbol } from "@/components/material_symbol";
-import { ZIndexes } from "@/theme/common";
-import { palette, palette as basePalette, withTransparency } from "@/theme/palette";
-import { SPACINGS } from "@/theme/sizes";
-
 import { ReactNode, useLayoutEffect, useRef, useState } from "react";
 
 import { AppBar, AppBarProps, Box, Button, ButtonProps, Divider, IconButton, Stack } from "@mui/material";
+
+import { ZIndexes } from "../theme/common";
+import { palette, palette as basePalette, withTransparency } from "../theme/palette";
+import { SPACINGS } from "../theme/sizes";
+import { CountryType, LangSelector, LangSelectorProps } from "./lang_selector";
+import { MaterialSymbol } from "./material_symbol";
 
 export interface NavProps {
   active: boolean;

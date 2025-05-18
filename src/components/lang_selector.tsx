@@ -1,6 +1,6 @@
-import { SPACINGS } from "@/theme/sizes";
-
 import { MenuItem, Select, SelectProps, Stack } from "@mui/material";
+
+import { SPACINGS } from "../theme/sizes";
 
 export interface CountryType {
   displayCode: string;

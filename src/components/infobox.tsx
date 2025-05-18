@@ -1,9 +1,9 @@
-import { palette, withTransparency } from "@/theme/palette";
-import { SPACINGS } from "@/theme/sizes";
-
 import { ComponentProps, ReactNode } from "react";
 
 import { Box, Color, Stack, Typography } from "@mui/material";
+
+import { palette, withTransparency } from "../theme/palette";
+import { SPACINGS } from "../theme/sizes";
 
 export interface InfoboxProps extends ComponentProps<typeof Stack> {
   /**

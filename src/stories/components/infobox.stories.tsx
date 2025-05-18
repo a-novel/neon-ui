@@ -1,8 +1,8 @@
-import { InfoBox, MaterialSymbol } from "@/components";
-import { SPACINGS } from "@/theme/sizes";
-
 import { Stack } from "@mui/material";
 import { Meta, StoryObj } from "@storybook/react";
+
+import { InfoBox, MaterialSymbol } from "../../components";
+import { SPACINGS } from "../../theme/sizes";
 
 const meta: Meta<typeof InfoBox> = {
   component: InfoBox,

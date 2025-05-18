@@ -1,4 +1,4 @@
-import { CountryType } from "@/components";
+import { CountryType } from "../components";
 
 export const LANGS: Record<string, CountryType> = {
   en: {
