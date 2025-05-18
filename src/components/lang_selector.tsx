@@ -34,7 +34,7 @@ export const LangSelector = <Langs extends Record<string, CountryType>>({
       value={selectedLang}
       onChange={(e) => onChange(e.target.value as keyof Langs)}
       renderValue={() => (
-        <Stack direction="row" alignItems="center" gap={SPACINGS.MEDIUM}>
+        <Stack direction="row" alignItems="center" gap={SPACINGS.MEDIUM} fontSize="1rem">
           <img
             loading="lazy"
             width="20"

@@ -41,7 +41,7 @@ export const NavBar = <Langs extends Record<string, CountryType>>({
   const appBarHeight = appBarRef.current?.getBoundingClientRect().height ?? 0;
 
   const [showBurger, setShowBurger] = useState(false);
-  const [openBurger, setOpenBurger] = useState(false);
+  const [burgerOpened, setBurgerOpened] = useState(false);
 
   useLayoutEffect(() => {
     // Display temporarily to take measurements.
@@ -65,18 +65,18 @@ export const NavBar = <Langs extends Record<string, CountryType>>({
       }
     } else {
       setShowBurger(false);
-      setOpenBurger(false);
+      setBurgerOpened(false);
     }
   }, [appBarWidth]);
 
   // Disable scroll when the burger menu is open.
   useLayoutEffect(() => {
-    if (openBurger) {
+    if (burgerOpened) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
-  }, [openBurger]);
+  }, [burgerOpened]);
 
   return (
     <>
@@ -120,15 +120,16 @@ export const NavBar = <Langs extends Record<string, CountryType>>({
           {desktopActions}
           <LangSelector
             MenuProps={{
-              anchorOrigin: { vertical: "bottom", horizontal: "left" },
-              transformOrigin: { vertical: "top", horizontal: "center" },
+              anchorOrigin: { vertical: "bottom", horizontal: "right" },
+              transformOrigin: { vertical: "top", horizontal: "right" },
+              marginThreshold: 0,
             }}
             {...lang}
           />
         </Stack>
 
-        <IconButton sx={{ display: showBurger ? undefined : "none" }} onClick={() => setOpenBurger((prev) => !prev)}>
-          <MaterialSymbol icon="menu" />
+        <IconButton sx={{ display: showBurger ? undefined : "none" }} onClick={() => setBurgerOpened((prev) => !prev)}>
+          <MaterialSymbol icon={burgerOpened ? "close" : "menu"} />
         </IconButton>
       </AppBar>
       <Stack
@@ -136,7 +137,7 @@ export const NavBar = <Langs extends Record<string, CountryType>>({
         alignItems="center"
         padding={SPACINGS.MEDIUM}
         gap={SPACINGS.LARGE}
-        display={showBurger && openBurger ? undefined : "none"}
+        display={showBurger && burgerOpened ? undefined : "none"}
         position="fixed"
         top={`${appBarHeight}px`}
         right={0}
@@ -156,14 +157,9 @@ export const NavBar = <Langs extends Record<string, CountryType>>({
       >
         <LangSelector
           MenuProps={{
-            anchorOrigin: {
-              vertical: "bottom",
-              horizontal: "center",
-            },
-            transformOrigin: {
-              vertical: "top",
-              horizontal: "center",
-            },
+            anchorOrigin: { vertical: "bottom", horizontal: "center" },
+            transformOrigin: { vertical: "top", horizontal: "center" },
+            marginThreshold: 0,
           }}
           fullWidth
           {...lang}
