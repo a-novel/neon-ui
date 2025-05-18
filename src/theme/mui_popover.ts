@@ -13,7 +13,6 @@ export const MuiPopover: Components<Theme>["MuiPopover"] = {
         backgroundColor: withTransparency(basePalette.grey![50]!, 66),
         backdropFilter: "saturate(75%) blur(0.33rem)",
         zIndex: ZIndexes.POPOVER,
-        margin: SPACINGS.MEDIUM,
         padding: SPACINGS.SMALL,
         borderRadius: SPACINGS.SMALL,
         "& > .MuiList-root": {
