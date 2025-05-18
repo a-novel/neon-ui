@@ -1,6 +1,5 @@
-import { StatusPage } from "@/index";
+import { MaterialSymbol, StatusPage } from "@/index";
 
-import { CheckOutlined } from "@mui/icons-material";
 import { Button, Stack } from "@mui/material";
 import { Meta, StoryObj } from "@storybook/react";
 
@@ -31,7 +30,7 @@ export const Primary: Story = {
     children:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et " +
       "dolore magna aliqua.",
-    icon: <CheckOutlined />,
+    icon: <MaterialSymbol icon="check" />,
     color: "primary",
   },
 };
@@ -41,7 +40,7 @@ export const WithFooter: Story = {
     children:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et " +
       "dolore magna aliqua.",
-    icon: <CheckOutlined />,
+    icon: <MaterialSymbol icon="check" />,
     footer: <Button>Do something</Button>,
     color: "primary",
   },
@@ -52,7 +51,7 @@ export const StatusSuccess: Story = {
     children:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et " +
       "dolore magna aliqua.",
-    icon: <CheckOutlined />,
+    icon: <MaterialSymbol icon="check" />,
     color: "success",
   },
 };
@@ -62,7 +61,7 @@ export const StatusWarning: Story = {
     children:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et " +
       "dolore magna aliqua.",
-    icon: <CheckOutlined />,
+    icon: <MaterialSymbol icon="check" />,
     color: "warning",
   },
 };
@@ -72,7 +71,7 @@ export const StatusError: Story = {
     children:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et " +
       "dolore magna aliqua.",
-    icon: <CheckOutlined />,
+    icon: <MaterialSymbol icon="check" />,
     color: "error",
   },
 };
