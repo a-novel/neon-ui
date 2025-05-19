@@ -1,6 +1,16 @@
-import { ReactNode, useLayoutEffect, useRef, useState } from "react";
+import { ElementType, ReactNode, useLayoutEffect, useRef, useState } from "react";
 
-import { AppBar, AppBarProps, Box, Button, ButtonProps, Divider, IconButton, Stack } from "@mui/material";
+import {
+  AppBar,
+  AppBarProps,
+  Box,
+  Button,
+  ButtonProps,
+  Divider,
+  IconButton,
+  Stack,
+  type ButtonTypeMap,
+} from "@mui/material";
 
 import { ZIndexes } from "../theme/common";
 import { palette, palette as basePalette, withTransparency } from "../theme/palette";
@@ -15,8 +25,11 @@ export interface NavProps {
   children: ReactNode;
 }
 
-export type NavBarProps<Langs extends Record<string, CountryType>> = Omit<AppBarProps, "children" | "lang"> & {
-  homeButton: Omit<ButtonProps, "children" | "variant"> & {
+export type NavBarProps<
+  Langs extends Record<string, CountryType> = Record<string, CountryType>,
+  HomeButtonComponent extends ElementType = ButtonTypeMap["defaultComponent"],
+> = Omit<AppBarProps, "children" | "lang"> & {
+  homeButton: Omit<ButtonProps<HomeButtonComponent>, "children" | "variant"> & {
     icon: string;
   };
   lang: Pick<LangSelectorProps<Langs>, "langs" | "selectedLang" | "onChange">;
