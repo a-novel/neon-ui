@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
 
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography, TypographyProps } from "@mui/material";
 
 import { SPACINGS } from "../theme/sizes";
 
 export interface StatusPageProps {
   icon?: ReactNode;
-  color: "primary" | "secondary" | "error" | "success";
+  color: TypographyProps["color"];
   children: ReactNode;
   footer?: ReactNode;
 }
