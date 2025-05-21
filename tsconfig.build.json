@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "exclude": ["./src/stories"],
+  "exclude": ["./stories"],
   "compilerOptions": {
     "declaration": true,
     "emitDeclarationOnly": true,

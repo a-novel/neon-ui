@@ -1,7 +1,7 @@
 import { Stack, TextField } from "@mui/material";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { SPACINGS } from "../../theme/sizes";
+import { SPACINGS } from "../../src/theme/sizes";
 
 const meta: Meta<typeof TextField> = {
   component: TextField,
