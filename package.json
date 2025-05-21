@@ -31,6 +31,14 @@
     ".": {
       "import": "./dist/index.es.js",
       "types": "./dist/index.d.ts"
+    },
+    "./ui": {
+      "import": "./dist/ui/index.es.js",
+      "types": "./dist/ui/index.d.ts"
+    },
+    "./ux": {
+      "import": "./dist/uxindex.es.js",
+      "types": "./dist/ux/index.d.ts"
     }
   },
   "publishConfig": {
@@ -38,12 +46,15 @@
   },
   "dependencies": {
     "@fontsource/arimo": "^5.2.5",
-    "@fontsource/bungee": "^5.2.5"
+    "@fontsource/bungee": "^5.2.5",
+    "i18next": "^25.2.0",
+    "react-i18next": "^15.5.1"
   },
   "peerDependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^7.0.2",
+    "@tanstack/react-form": "^1.11.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
@@ -60,6 +71,7 @@
     "@storybook/test": "^8.6.14",
     "@storybook/theming": "^8.6.14",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/node": "^22.15.21",
     "@types/react": "^19.1.4",
     "eslint": "^9.27.0",
     "eslint-config-prettier": "^10.1.5",
@@ -72,7 +84,8 @@
     "storybook": "^8.6.14",
     "typescript": "~5.7.3",
     "typescript-eslint": "^8.32.1",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "yaml": "^2.8.0"
   },
   "packageManager": "pnpm@10.11.0",
   "engines": {

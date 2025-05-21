@@ -1,30 +1,23 @@
-import logo from "../../assets/banner.png";
-
-import { Avatar, Stack, Typography } from "@mui/material";
-import { deepOrange } from "@mui/material/colors";
+import { AppBar, Stack, Typography } from "@mui/material";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { NavBar } from "../../components";
-import { SPACINGS } from "../../theme/sizes";
-import { LANGS } from "../_common";
+import { SPACINGS } from "../../src/theme/sizes";
 
-const meta: Meta<typeof NavBar> = {
-  component: NavBar,
+const meta: Meta<typeof AppBar> = {
+  component: AppBar,
   parameters: {
     layout: "centered",
   },
+  argTypes: {
+    children: { control: { disable: true } },
+  },
   tags: ["autodocs"],
   render: (args) => (
-    <Stack
-      direction="column"
-      gap={SPACINGS.LARGE}
-      padding={0}
-      minHeight="100vh"
-      boxSizing="border-box"
-      overflow="visible"
-    >
-      <NavBar {...args} />
-      <Typography padding="1rem">
+    <Stack direction="column" gap={SPACINGS.LARGE} padding={0} maxHeight="10rem" overflow="auto">
+      <AppBar {...args}>
+        <Typography>Navigation and stuff</Typography>
+      </AppBar>
+      <Typography>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
@@ -38,7 +31,7 @@ const meta: Meta<typeof NavBar> = {
         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        dolore magna aliqua. Ut enim ad minim veniam, quiks nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
@@ -55,50 +48,46 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Primary: Story = {};
+
+export const Secondary: Story = {
   args: {
-    homeButton: {
-      icon: logo,
-    },
-    lang: {
-      langs: LANGS,
-      selectedLang: "fr",
-      onChange: () => null,
-    },
+    color: "secondary",
   },
 };
 
-export const WithNav: Story = {
+export const Error: Story = {
   args: {
-    homeButton: {
-      icon: logo,
-    },
-    lang: {
-      langs: LANGS,
-      selectedLang: "fr",
-      onChange: () => null,
-    },
-    nav: [
-      { key: "home", children: "Home", color: "info", activeColor: "primary" },
-      { key: "dashboard", children: "Dashboard", active: true, color: "info", activeColor: "primary" },
-      { key: "settings", children: "Settings", color: "info" },
-      { key: "profile", children: "Profile", color: "info" },
-      { key: "subscription", children: "Subscription", color: "error" },
-    ],
+    color: "error",
   },
 };
 
-export const WithDesktopActions: Story = {
+export const Success: Story = {
   args: {
-    homeButton: {
-      icon: logo,
-    },
-    lang: {
-      langs: LANGS,
-      selectedLang: "fr",
-      onChange: () => null,
-    },
-    desktopActions: <Avatar sx={{ bgcolor: deepOrange[500] }}>U</Avatar>,
-    mobileActions: <Avatar sx={{ bgcolor: deepOrange[500] }}>U</Avatar>,
+    color: "success",
+  },
+};
+
+export const Info: Story = {
+  args: {
+    color: "info",
+  },
+};
+
+export const Warning: Story = {
+  args: {
+    color: "warning",
+  },
+};
+
+export const Transparent: Story = {
+  args: {
+    color: "transparent",
+  },
+};
+
+export const Default: Story = {
+  args: {
+    color: "default",
   },
 };

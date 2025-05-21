@@ -1,8 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import { Meta, StoryObj } from "@storybook/react";
 
-import { SPACINGS } from "../theme/sizes";
-import { FONTS } from "../theme/typography";
+import { SPACINGS, FONTS } from "../src";
 
 const SampleText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 
