@@ -10,6 +10,5 @@ export const typography: TypographyVariantsOptions = {
   fontSize: 16,
   allVariants: {
     verticalAlign: "middle",
-    maxWidth: "120ch",
   },
 };

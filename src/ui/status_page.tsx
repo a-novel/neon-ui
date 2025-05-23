@@ -48,7 +48,14 @@ export const StatusPage = ({ icon, children, footer, color }: StatusPageProps) =
       {children}
     </Stack>
     {footer && (
-      <Stack direction="row" padding={SPACINGS.MEDIUM} gap={SPACINGS.MEDIUM} alignSelf="flex-start" maxWidth="100%">
+      <Stack
+        direction="row"
+        padding={SPACINGS.MEDIUM}
+        gap={SPACINGS.MEDIUM}
+        alignSelf="flex-start"
+        width="100%"
+        maxWidth="120ch"
+      >
         {footer}
       </Stack>
     )}
