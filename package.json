@@ -48,7 +48,7 @@
     "@fontsource/arimo": "^5.2.5",
     "@fontsource/bungee": "^5.2.5",
     "i18next": "^25.2.0",
-    "react-i18next": "^15.5.1"
+    "react-i18next": "^15.5.2"
   },
   "peerDependencies": {
     "@emotion/react": "^11.14.0",
