@@ -1,7 +1,7 @@
 {
   "name": "@a-novel/neon-ui",
   "private": false,
-  "version": "2.6.2",
+  "version": "2.6.3",
   "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
@@ -33,11 +33,11 @@
       "types": "./dist/index.d.ts"
     },
     "./ui": {
-      "import": "./dist/ui/index.es.js",
+      "import": "./dist/ui/ui.es.js",
       "types": "./dist/ui/index.d.ts"
     },
     "./ux": {
-      "import": "./dist/uxindex.es.js",
+      "import": "./dist/ux/ux.es.js",
       "types": "./dist/ux/index.d.ts"
     }
   },
