@@ -3,8 +3,9 @@ import { SxProps, Theme } from "@mui/material";
 import { withTransparency } from "./palette";
 
 export const ZIndexes = {
-  HEADER: 900,
-  POPOVER: 800,
+  MODAL: 900,
+  HEADER: 800,
+  POPOVER: 700,
 };
 
 export const ContainerSX: SxProps<Theme> = (theme) => ({
