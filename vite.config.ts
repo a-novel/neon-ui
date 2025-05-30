@@ -12,6 +12,7 @@ export default defineConfig({
         index: "src/index.ts",
         ui: "src/ui/index.ts",
         ux: "src/ux/index.ts",
+        storybook: "src/storybook/index.ts",
       },
       name,
       formats: ["es"],
