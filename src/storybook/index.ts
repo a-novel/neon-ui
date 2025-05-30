@@ -1,1 +1,1 @@
-export * from "../storybook/tanstack_form_storybook";
+export * from "./tanstack_form_storybook";
