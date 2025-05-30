@@ -39,6 +39,10 @@
     "./ux": {
       "import": "./dist/ux/ux.es.js",
       "types": "./dist/ux/index.d.ts"
+    },
+    "./storybook": {
+      "import": "./dist/storybook/ux.es.js",
+      "types": "./dist/storybook/index.d.ts"
     }
   },
   "publishConfig": {

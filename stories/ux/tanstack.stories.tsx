@@ -5,8 +5,8 @@ import { Meta, StoryObj } from "@storybook/react";
 import { ReactFormExtendedApi } from "@tanstack/react-form";
 
 import { SPACINGS } from "../../src";
+import { FormRenderer, NewMockForm } from "../../src/storybook";
 import { TanstackTextField } from "../../src/ux";
-import { FormRenderer, NewMockForm } from "../../src/ux/tanstack_form_storybook";
 
 interface DemoForm {
   foo: string;

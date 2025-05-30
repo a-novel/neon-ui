@@ -15,6 +15,7 @@ import { MuiButton } from "./mui_button";
 import { MuiFormHelperText } from "./mui_form_helper_text";
 import { MuiInputBase } from "./mui_input_base";
 import { MuiInputLabel } from "./mui_input_label";
+import { MuiModal } from "./mui_modal";
 import { MuiPopover } from "./mui_popover";
 import { MuiTextField } from "./mui_text_field";
 import { palette } from "./palette";
@@ -28,6 +29,7 @@ let theme = createTheme({
   spacing: SPACINGS.BASE,
   typography,
   components: {
+    MuiModal,
     MuiButton,
     MuiTextField,
     MuiInputLabel,

@@ -63,7 +63,7 @@ export const Modal: FC<ModalProps> = ({ title, icon, color = "primary", children
         padding={SPACINGS.MEDIUM}
         gap={SPACINGS.SMALL}
         sx={{
-          backgroundColor: (theme) => withTransparency(getModalColor(color, theme)[300], 66),
+          backgroundColor: (theme) => withTransparency(getModalColor(color, theme)[300], 75),
         }}
       >
         <Typography variant="h6" padding={0} margin={0}>
@@ -73,7 +73,14 @@ export const Modal: FC<ModalProps> = ({ title, icon, color = "primary", children
           {title}
         </Typography>
       </Stack>
-      <Box sx={{ padding: SPACINGS.MEDIUM }}>{children}</Box>
+      <Box
+        sx={{
+          padding: SPACINGS.MEDIUM,
+          backgroundColor: (theme) => withTransparency(theme.palette.background.default, 75),
+        }}
+      >
+        {children}
+      </Box>
     </Box>
   </MuiModal>
 );
