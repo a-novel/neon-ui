@@ -19,8 +19,8 @@ import { CountryType, LangSelector, LangSelectorProps } from "./lang_selector";
 import { MaterialSymbol } from "./material_symbol";
 
 export interface NavProps {
-  active: boolean;
-  color: "primary" | "secondary" | "error" | "success" | "info" | "warning";
+  active?: boolean;
+  color?: "primary" | "secondary" | "error" | "success" | "info" | "warning";
   key: string;
   children: ReactNode;
 }
@@ -191,9 +191,9 @@ export const NavBar = <Langs extends Record<string, CountryType>>({
               {nav?.map(({ key, active, color, ...props }) => (
                 <Button
                   variant="list-item"
-                  aria-selected={active}
+                  aria-selected={active ?? false}
                   key={key}
-                  color={color}
+                  color={color ?? "primary"}
                   sx={{
                     paddingX: SPACINGS.LARGE,
                     paddingY: SPACINGS.MEDIUM,

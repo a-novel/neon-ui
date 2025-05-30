@@ -1,5 +1,5 @@
 import { Stack } from "@mui/material";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 
 import { SPACINGS } from "../../src";
 import { InfoBox, MaterialSymbol } from "../../src/ui";
@@ -27,7 +27,7 @@ export const Primary: Story = {};
 
 export const LongContent: Story = {
   render: (args) => (
-    <InfoBox maxWidth="30rem" color="primary" {...args}>
+    <InfoBox maxWidth="30rem" {...args}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
       magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.

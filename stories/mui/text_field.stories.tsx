@@ -1,5 +1,5 @@
 import { Stack, TextField } from "@mui/material";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 
 import { SPACINGS } from "../../src/theme/sizes";
 

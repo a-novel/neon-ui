@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 
 import { LangSelector } from "../../src/ui";
 import { LANGS } from "../_common";

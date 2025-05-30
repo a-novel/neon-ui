@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 import { Stack } from "@mui/material";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import { ReactFormExtendedApi } from "@tanstack/react-form";
 
 import { SPACINGS } from "../../src";

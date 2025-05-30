@@ -2,7 +2,7 @@ import logo from "../../src/assets/banner.png";
 
 import { Avatar, Stack, Typography } from "@mui/material";
 import { deepOrange } from "@mui/material/colors";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 
 import { SPACINGS } from "../../src";
 import { NavBar } from "../../src/ui";
@@ -79,8 +79,8 @@ export const WithNav: Story = {
       onChange: () => null,
     },
     nav: [
-      { key: "home", children: "Home", color: "info", activeColor: "primary" },
-      { key: "dashboard", children: "Dashboard", active: true, color: "info", activeColor: "primary" },
+      { key: "home", children: "Home", color: "info" },
+      { key: "dashboard", children: "Dashboard", active: true, color: "info" },
       { key: "settings", children: "Settings", color: "info" },
       { key: "profile", children: "Profile", color: "info" },
       { key: "subscription", children: "Subscription", color: "error" },
