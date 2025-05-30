@@ -1,7 +1,7 @@
 {
   "name": "@a-novel/neon-ui",
   "private": false,
-  "version": "2.6.7",
+  "version": "2.6.8",
   "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
@@ -41,7 +41,7 @@
       "types": "./dist/ux/index.d.ts"
     },
     "./storybook": {
-      "import": "./dist/storybook/ux.es.js",
+      "import": "./dist/storybook/storybook.es.js",
       "types": "./dist/storybook/index.d.ts"
     }
   },
