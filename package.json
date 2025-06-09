@@ -49,8 +49,8 @@
     "registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
-    "@fontsource/arimo": "^5.2.5",
-    "@fontsource/bungee": "^5.2.5",
+    "@fontsource/arimo": "^5.2.6",
+    "@fontsource/bungee": "^5.2.6",
     "i18next": "^25.2.1",
     "react-i18next": "^15.5.2"
   },
