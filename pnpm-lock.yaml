@@ -15,11 +15,11 @@ importers:
         specifier: ^11.14.0
         version: 11.14.0(@emotion/react@11.14.0(@types/react@19.1.6)(react@19.1.0))(@types/react@19.1.6)(react@19.1.0)
       '@fontsource/arimo':
-        specifier: ^5.2.5
-        version: 5.2.5
+        specifier: ^5.2.6
+        version: 5.2.6
       '@fontsource/bungee':
-        specifier: ^5.2.5
-        version: 5.2.5
+        specifier: ^5.2.6
+        version: 5.2.6
       '@mui/material':
         specifier: ^7.0.2
         version: 7.1.0(@emotion/react@11.14.0(@types/react@19.1.6)(react@19.1.0))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.1.6)(react@19.1.0))(@types/react@19.1.6)(react@19.1.0))(@types/react@19.1.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -438,11 +438,11 @@ packages:
     resolution: {integrity: sha512-0J+zgWxHN+xXONWIyPWKFMgVuJoZuGiIFu8yxk7RJjxkzpGmyja5wRFqZIVtjDVOQpV+Rw0iOAjYPE2eQyjr0w==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fontsource/arimo@5.2.5':
-    resolution: {integrity: sha512-oYItTqrWasegXqTsw1uLOl9Z18yNvxJKM1sPelTRzLHnuYmpEodjJLycj/oCi0lAK/PooMd/EpbIs8xkGOFz9w==}
+  '@fontsource/arimo@5.2.6':
+    resolution: {integrity: sha512-D2fJ0DHYjJz0mSiqtd4HUykEaRZ1o0hMxyFg8/QAnDfNiZapPDXKaflRX4ZDuyxwkI/oizJ9yZkwdBL75MFnoQ==}
 
-  '@fontsource/bungee@5.2.5':
-    resolution: {integrity: sha512-fGAlOFSWFGeCwcnOuD1f6ou0059XVxsR5IvW+2MbQF9qmsKmgHiy1A4I97unrUqaQ9ZoDTRQzCDcqgKQHdV8LQ==}
+  '@fontsource/bungee@5.2.6':
+    resolution: {integrity: sha512-bA0VFjqjCs0iJ0F5Shvo3AemOp/JoYDefOqo/OPPoDjx18oUfUMI3w5kRFsCmpOX1izpCeHnGnK0LcflO1ztqQ==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -2705,9 +2705,9 @@ snapshots:
       '@eslint/core': 0.14.0
       levn: 0.4.1
 
-  '@fontsource/arimo@5.2.5': {}
+  '@fontsource/arimo@5.2.6': {}
 
-  '@fontsource/bungee@5.2.5': {}
+  '@fontsource/bungee@5.2.6': {}
 
   '@humanfs/core@0.19.1': {}
 
