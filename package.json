@@ -52,7 +52,7 @@
     "@fontsource/arimo": "^5.2.6",
     "@fontsource/bungee": "^5.2.6",
     "i18next": "^25.2.1",
-    "react-i18next": "^15.5.2"
+    "react-i18next": "^15.5.3"
   },
   "peerDependencies": {
     "@emotion/react": "^11.14.0",
