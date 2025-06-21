@@ -54,6 +54,7 @@ export const Modal: FC<ModalProps> = ({ title, icon, color = "primary", children
         borderWidth: "thin",
         borderStyle: "solid",
         boxShadow: (theme) => `0 calc(1/3 * 1em) 0 0 ${getModalColor(color, theme)[200]}`,
+        outline: "none",
       }}
     >
       <Stack
