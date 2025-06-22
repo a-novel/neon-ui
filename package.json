@@ -14,7 +14,10 @@
     "storybook:dev": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "publish:patch": "pnpm version patch && git push",
+    "publish:minor": "pnpm version minor && git push",
+    "publish:major": "pnpm version major && git push"
   },
   "author": "A-Novel",
   "license": "AGPL-3.0",
