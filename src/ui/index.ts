@@ -5,3 +5,4 @@ export * from "./nav";
 export * from "./material_symbol";
 export * from "./modal";
 export * from "./errorbox";
+export * from "./section";
