@@ -3,7 +3,9 @@ import { FC } from "react";
 import { Meta, StoryObj } from "@storybook/react-vite";
 import { ReactFormExtendedApi } from "@tanstack/react-form";
 
+import { SPACINGS } from "../../src";
 import { FormRenderer, NewMockForm } from "../../src/storybook";
+import { Section } from "../../src/ui/section";
 import { TanstackFormWrapper, TanstackTextField } from "../../src/ux";
 
 interface DemoForm {
@@ -13,17 +15,17 @@ interface DemoForm {
 const TanstackFormRenderer: FC<{
   form: ReactFormExtendedApi<DemoForm, any, any, any, any, any, any, any, any, any>;
 }> = ({ form }) => (
-  <TanstackFormWrapper
-    form={form}
-    maxWidth="100vw"
-    submitButton={(isSubmitting) => (isSubmitting ? "submitting" : "submit")}
-  >
-    {" "}
-    (
-    <form.Field name="foo">
-      {(field) => <TanstackTextField field={field} label="Foo field" maxLength={128} />}
-    </form.Field>
-  </TanstackFormWrapper>
+  <Section margin={SPACINGS.LARGE}>
+    <TanstackFormWrapper
+      form={form}
+      maxWidth="100vw"
+      submitButton={(isSubmitting) => (isSubmitting ? "submitting" : "submit")}
+    >
+      <form.Field name="foo">
+        {(field) => <TanstackTextField field={field} label="Foo field" maxLength={128} />}
+      </form.Field>
+    </TanstackFormWrapper>
+  </Section>
 );
 
 const meta: Meta<typeof TanstackFormRenderer> = {

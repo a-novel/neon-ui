@@ -3,6 +3,8 @@ import { useMemo } from "react";
 import { InfoBox, InfoboxProps, MaterialSymbol } from "./index";
 
 const printError = (err: any): string[] => {
+  if (!err) return [];
+
   // Error is already a string, youhou.
   if (typeof err === "string") {
     return [err];
