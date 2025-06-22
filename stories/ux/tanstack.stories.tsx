@@ -1,12 +1,10 @@
 import { FC } from "react";
 
-import { Stack } from "@mui/material";
 import { Meta, StoryObj } from "@storybook/react-vite";
 import { ReactFormExtendedApi } from "@tanstack/react-form";
 
-import { SPACINGS } from "../../src";
 import { FormRenderer, NewMockForm } from "../../src/storybook";
-import { TanstackTextField } from "../../src/ux";
+import { TanstackFormWrapper, TanstackTextField } from "../../src/ux";
 
 interface DemoForm {
   foo: string;
@@ -15,19 +13,17 @@ interface DemoForm {
 const TanstackFormRenderer: FC<{
   form: ReactFormExtendedApi<DemoForm, any, any, any, any, any, any, any, any, any>;
 }> = ({ form }) => (
-  <Stack
-    direction="column"
-    gap={SPACINGS.LARGE}
-    component="form"
-    width="64ch"
-    alignItems="stretch"
+  <TanstackFormWrapper
+    form={form}
     maxWidth="100vw"
-    boxSizing="border-box"
+    submitButton={(isSubmitting) => (isSubmitting ? "submitting" : "submit")}
   >
+    {" "}
+    (
     <form.Field name="foo">
       {(field) => <TanstackTextField field={field} label="Foo field" maxLength={128} />}
     </form.Field>
-  </Stack>
+  </TanstackFormWrapper>
 );
 
 const meta: Meta<typeof TanstackFormRenderer> = {
@@ -84,6 +80,19 @@ export const FieldErrors: Story = {
       },
       fieldErrors: {
         foo: ["Some error message", "Another error message"],
+      },
+    }),
+  },
+};
+
+export const FormError: Story = {
+  args: {
+    form: NewMockForm({
+      values: {
+        foo: "Some input text",
+      },
+      formErrors: {
+        onSubmit: "This is a form error",
       },
     }),
   },

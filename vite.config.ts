@@ -1,10 +1,15 @@
 import { peerDependencies, name } from "./package.json";
 import yamlLoader from "./plugins/yaml";
 
+import svgr from "@svgr/rollup";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [yamlLoader],
+  plugins: [
+    // SVGO is disabled because it messes up with some icons by removing intermediate tags.
+    svgr({ icon: true, svgo: false }),
+    yamlLoader,
+  ],
   build: {
     sourcemap: true,
     lib: {
