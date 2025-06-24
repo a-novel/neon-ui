@@ -42,7 +42,12 @@ export const TanstackFormWrapper = ({
 
         <div style={{ height: SPACINGS.MEDIUM }} />
 
-        <Button color="primary" type="submit" disabled={isSubmitting} {...submitButtonProps}>
+        <Button
+          color="primary"
+          type="submit"
+          {...submitButtonProps}
+          disabled={submitButtonProps?.disabled ?? isSubmitting}
+        >
           {typeof submitButton === "function" ? submitButton(isSubmitting) : submitButton}
         </Button>
       </Stack>
