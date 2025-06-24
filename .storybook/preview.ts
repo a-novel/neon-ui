@@ -1,10 +1,8 @@
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import { withThemeFromJSXProvider } from "@storybook/addon-themes";
 import type { Preview } from "@storybook/react-vite";
 import { themes } from "storybook/theming";
 import { INITIAL_VIEWPORTS } from "storybook/viewport";
 
-import { theme } from "../src";
+import { I18NextDecorator, MuiDecorator } from "./decorators";
 
 themes.dark.appContentBg = "#000000";
 themes.dark.appPreviewBg = "#000000";
@@ -27,15 +25,23 @@ const preview: Preview = {
   },
 };
 
-export const decorators = [
-  withThemeFromJSXProvider({
-    themes: {
-      dark: theme,
+// Create a global variable called locale in storybook
+// and add a menu in the toolbar to change your locale
+export const globalTypes = {
+  locale: {
+    name: "Locale",
+    description: "Internationalization locale",
+    toolbar: {
+      icon: "globe",
+      items: [
+        { value: "en", title: "English" },
+        { value: "fr", title: "Francais" },
+      ],
+      showName: true,
     },
-    defaultTheme: "dark",
-    Provider: ThemeProvider,
-    GlobalStyles: CssBaseline,
-  }),
-];
+  },
+};
+
+export const decorators = [I18NextDecorator, MuiDecorator];
 
 export default preview;

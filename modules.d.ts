@@ -1,8 +1,3 @@
-declare module "*.yaml" {
-  const value: Record<string, unknown>;
-  export default value;
-}
-
 declare module "*.svg" {
   import * as React from "react";
 

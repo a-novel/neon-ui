@@ -47,8 +47,8 @@ export const TanstackTextField = <Variant extends TextFieldVariants>({
       <ErrorBox error={errors} />
       {maxLength && field.state.value.length >= maxLength ? (
         <InfoBox icon={<MaterialSymbol icon="cancel" />} color="secondary">
-          <Translation i18n={i18nPKG} ns="input">
-            {(t) => t("input:text.errors.tooLong", { count: maxLength })}
+          <Translation i18n={i18nPKG} ns="form">
+            {(t) => t("form:text.errors.tooLong", { count: maxLength })}
           </Translation>
         </InfoBox>
       ) : null}
