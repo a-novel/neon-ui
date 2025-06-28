@@ -12,15 +12,14 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       entry: {
-        index: "src/index.ts",
-        ui: "src/ui/index.ts",
-        ux: "src/ux/index.ts",
-        storybook: "src/storybook/index.ts",
+        "src/index": "src/index.ts",
+        "src/ui/index": "src/ui/index.ts",
+        "src/ux/index": "src/ux/index.ts",
+        "src/storybook/index": "src/storybook/index.ts",
       },
       name,
       formats: ["es"],
-      fileName: (format, entryName) =>
-        entryName === "index" ? `${entryName}.${format}.js` : `${entryName}/${entryName}.${format}.js`,
+      fileName: (format, entryName) => `${entryName}.${format}.js`,
     },
     rollupOptions: {
       external: Object.keys(peerDependencies),
