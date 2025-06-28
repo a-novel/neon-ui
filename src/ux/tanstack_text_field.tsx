@@ -1,11 +1,13 @@
+import { useEffect } from "react";
+
 import { Stack, TextField, TextFieldProps, TextFieldVariants } from "@mui/material";
 import { FieldApi, useStore } from "@tanstack/react-form";
-import { Translation } from "react-i18next";
+import { T } from "@tolgee/react";
 
+import { tolgee } from "../../.storybook/decorators";
 import { SPACINGS } from "../theme/sizes";
 import { InfoBox, MaterialSymbol } from "../ui";
 import { ErrorBox } from "../ui";
-import { i18nPKG } from "./i18n";
 
 export type TantstackTextFieldProps<Variant extends TextFieldVariants = TextFieldVariants> = Omit<
   TextFieldProps<Variant>,
@@ -28,6 +30,12 @@ export const TanstackTextField = <Variant extends TextFieldVariants>({
   const errors = useStore(field.store, (state) => state.meta.errors);
   const isSubmitting = useStore(field.form.store, (state) => state.isSubmitting);
 
+  // Load / unload translations.
+  useEffect(() => {
+    tolgee.addActiveNs("form").catch(console.error);
+    return () => tolgee.removeActiveNs("form");
+  }, []);
+
   return (
     <Stack direction="column" gap={SPACINGS.SMALL}>
       <TextField
@@ -47,9 +55,7 @@ export const TanstackTextField = <Variant extends TextFieldVariants>({
       <ErrorBox error={errors} />
       {maxLength && field.state.value.length >= maxLength ? (
         <InfoBox icon={<MaterialSymbol icon="cancel" />} color="secondary">
-          <Translation i18n={i18nPKG} ns="form">
-            {(t) => t("form:text.errors.tooLong", { count: maxLength })}
-          </Translation>
+          <T keyName="text.errors.tooLong" ns="form" params={{ count: maxLength }} />
         </InfoBox>
       ) : null}
     </Stack>

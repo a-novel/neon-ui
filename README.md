@@ -18,9 +18,6 @@ Create a `.npmrc` file in the root of your project if it doesn't exist, and make
 Then, install the package using pnpm:
 
 ```bash
-pnpm add react react-dom
-pnpm add @emotion/react @emotion/styled @mui/material
-pnpm add @tanstack/react-form
 pnpm add @a-novel/neon-ui
 ```
 
@@ -59,10 +56,6 @@ import { FC, ReactNode } from "react";
 
 import { theme, init } from "@a-novel/neon-ui";
 import { CssBaseline, ThemeProvider } from "@mui/material";
-
-import i18n from "./locale_i18n_instance";
-
-init({ i18n });
 
 export const App: FC<{ children: ReactNode }> = ({ children }) => (
   <ThemeProvider theme={theme}>
