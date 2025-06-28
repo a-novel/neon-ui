@@ -36,15 +36,15 @@
       "types": "./dist/src/index.d.ts"
     },
     "./ui": {
-      "import": "./dist/src/ui/ui.es.js",
+      "import": "./dist/src/ui/index.es.js",
       "types": "./dist/src/ui/index.d.ts"
     },
     "./ux": {
-      "import": "./dist/src/ux/ux.es.js",
+      "import": "./dist/src/ux/index.es.js",
       "types": "./dist/src/ux/index.d.ts"
     },
     "./storybook": {
-      "import": "./dist/src/storybook/storybook.es.js",
+      "import": "./dist/src/storybook/index.es.js",
       "types": "./dist/src/storybook/index.d.ts"
     }
   },
