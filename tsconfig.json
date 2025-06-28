@@ -20,5 +20,5 @@
     "noEmit": true,
     "allowJs": true
   },
-  "include": ["src", "modules.d.ts", "stories"]
+  "include": ["**/*.ts", "**/*.tsx"]
 }

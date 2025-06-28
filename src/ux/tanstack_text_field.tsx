@@ -2,9 +2,8 @@ import { useEffect } from "react";
 
 import { Stack, TextField, TextFieldProps, TextFieldVariants } from "@mui/material";
 import { FieldApi, useStore } from "@tanstack/react-form";
-import { T } from "@tolgee/react";
+import { T, useTolgee } from "@tolgee/react";
 
-import { tolgee } from "../../.storybook/decorators";
 import { SPACINGS } from "../theme/sizes";
 import { InfoBox, MaterialSymbol } from "../ui";
 import { ErrorBox } from "../ui";
@@ -29,6 +28,7 @@ export const TanstackTextField = <Variant extends TextFieldVariants>({
 }: TantstackTextFieldProps<Variant>) => {
   const errors = useStore(field.store, (state) => state.meta.errors);
   const isSubmitting = useStore(field.form.store, (state) => state.isSubmitting);
+  const tolgee = useTolgee();
 
   // Load / unload translations.
   useEffect(() => {
