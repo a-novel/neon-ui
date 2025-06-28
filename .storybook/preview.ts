@@ -2,7 +2,7 @@ import type { Preview } from "@storybook/react-vite";
 import { themes } from "storybook/theming";
 import { INITIAL_VIEWPORTS } from "storybook/viewport";
 
-import { I18NextDecorator, MuiDecorator } from "./decorators";
+import { TolgeeDecorator, MuiDecorator } from "./decorators";
 
 themes.dark.appContentBg = "#000000";
 themes.dark.appPreviewBg = "#000000";
@@ -42,6 +42,6 @@ export const globalTypes = {
   },
 };
 
-export const decorators = [I18NextDecorator, MuiDecorator];
+export const decorators = [MuiDecorator, TolgeeDecorator];
 
 export default preview;
