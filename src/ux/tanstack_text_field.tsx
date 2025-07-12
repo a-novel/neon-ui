@@ -29,12 +29,13 @@ export const TanstackTextField = <Variant extends TextFieldVariants>({
   const errors = useStore(field.store, (state) => state.meta.errors);
   const isSubmitting = useStore(field.form.store, (state) => state.isSubmitting);
   const tolgee = useTolgee();
+  const { addActiveNs, removeActiveNs } = tolgee;
 
   // Load / unload translations.
   useEffect(() => {
-    tolgee.addActiveNs("form").catch(console.error);
-    return () => tolgee.removeActiveNs("form");
-  }, []);
+    addActiveNs("form").catch(console.error);
+    return () => removeActiveNs("form");
+  }, [addActiveNs, removeActiveNs]);
 
   return (
     <Stack direction="column" gap={SPACINGS.SMALL}>

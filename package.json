@@ -59,7 +59,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^7.0.2",
-    "@tanstack/react-form": "^1.11.2",
+    "@tanstack/react-form": "^1.14.1",
     "@tolgee/format-icu": "^6.2.6",
     "@tolgee/react": "^6.2.6",
     "react": "^19.1.0",
