@@ -18,6 +18,9 @@ Create a `.npmrc` file in the root of your project if it doesn't exist, and make
 Then, install the package using pnpm:
 
 ```bash
+# pnpm config set auto-install-peers true
+#  Or
+# pnpm config set auto-install-peers true --location project
 pnpm add @a-novel/neon-ui
 ```
 
